@@ -1,4 +1,4 @@
-# HTML Guide
+# HTML recommendations and best practices
 
 ## Prefer fewer elements over more elements
 
