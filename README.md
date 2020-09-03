@@ -2,6 +2,10 @@
 
 ## Prefer fewer elements over more elements
 
+It is harder to read, understand, and maintain large HTML blocks. Another reason — large DOM can influence performance.
+
+- [Avoid an excessive DOM size](https://web.dev/dom-size/)
+
 ### Bad
 ```html
 <div>
