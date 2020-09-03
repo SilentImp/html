@@ -165,6 +165,7 @@
 ## Prefer to keep presentation separated from structure
 
 ### Bad
+```html
 <ol class="steps">
   <li>Step 1</li>
   <li class="separator">
