@@ -130,4 +130,107 @@
 
 ## Prefer valid over invalid
 
-## Prefer to keep presentation separated from struccture
+### Bad
+```html
+<dl>
+  <h1>Dictionary</h1>
+
+  <dt>Beast of Bodmin</dt>
+  <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+  <dt>Morgawr</dt>
+  <dd>A sea serpent.</dd>
+
+  <dt>Owlman</dt>
+  <dd>A giant owl-like creature.</dd>
+</dl>
+```
+
+### Good
+```html
+<h1>Dictionary</h1>
+
+<dl>
+  <dt>Beast of Bodmin</dt>
+  <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+  <dt>Morgawr</dt>
+  <dd>A sea serpent.</dd>
+
+  <dt>Owlman</dt>
+  <dd>A giant owl-like creature.</dd>
+</dl>
+```
+
+## Prefer to keep presentation separated from structure
+
+### Bad
+<ol class="steps">
+  <li>Step 1</li>
+  <li class="separator">
+    <div class="dashes">
+      <div class="dash"></div>
+      <div class="dash"></div>
+      <div class="dash"></div>
+      <div class="dash"></div>
+      <div class="dash"></div>
+    </div>
+  </li>
+  <li>Step 2</li>
+</ol>
+<style>
+  ol.steps {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  .dashes {
+    display: flex;
+    margin: 0 5px;
+  }
+  .dash {
+    width: 6px;
+    height: 2px;
+    background: red;
+    margin: 0 5px 0 0;
+  }
+  .dash:last-child {
+    margin-right: 0;
+  }
+</style>
+```
+
+### Good
+```html
+<ol class="steps">
+  <li class="step">Step 1</li>
+  <li class="step">Step 2</li>
+</ol>
+
+<style>
+  .steps {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  .step {
+    position: relative;
+    margin-right: 60px;
+  }
+  .step::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    width: 50px;
+    margin-left: 5px;
+    margin-top: -1px;
+    border-top: 2px dashed red;
+  }
+  
+  .step:last-child::after {
+    display: none;
+  }
+</style>
+```
