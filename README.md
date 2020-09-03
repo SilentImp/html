@@ -43,6 +43,7 @@ It easier to read, understand, and maintain semantic HTML. Also it's better for 
 This way we would get more stable and solid solutions while delivering best possible experience to the user.
 
 - [Progressive Enhancement: What It Is, And How To Use It?](https://www.smashingmagazine.com/2009/04/progressive-enhancement-what-it-is-and-how-to-use-it/)
+- [Do websites need to look exactly the same in every browser?](http://dowebsitesneedtolookexactlythesameineverybrowser.com/)
 
 ### Bad
 ```html
@@ -98,6 +99,8 @@ This way we would get more stable and solid solutions while delivering best poss
 ## Prefer native over custom
 
 It next to impossible deliver better UX then one, which was provided by browser vendors. You don't have vendor resources, both time and human, and rarely see all underwater rocks and aspects related to the specific problem. Also, native elements usually have much better performance.
+
+- [Do I need a custom select?](https://doineedacustomselect.com/)
 
 ### Bad
 ```html
