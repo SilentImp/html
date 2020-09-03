@@ -20,6 +20,14 @@ It is harder to read, understand, and maintain large HTML blocks. Another reason
 
 ## Prefer semantic elements over non-semantic
 
+It easier to read, understand, and maintain semantic HTML. Also it's better for acessability, for example screen readers. And all kind of robots and parsers. Including search engine spiders. 
+
+- [The practical value of semantic HTML](https://www.brucelawson.co.uk/2018/the-practical-value-of-semantic-html/)
+- [HTML: A good basis for accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML)
+- [Understanding why Semantic HTML is important, as told by TypeScript.](https://medium.com/@mandy.michael/understanding-why-semantic-html-is-important-as-told-by-typescript-bd71ad41e6c4)
+- [The SEO Advantages of Machine-Readable HTML5 Semantic Markup](https://searchengineland.com/seo-advantages-of-machine-readable-html5-semantic-markup-314455)
+- [Semantics in HTML 5](https://alistapart.com/article/semanticsinhtml5/)
+
 ### Bad
 ```html
 <span>20 minutes ago.</span>
@@ -31,6 +39,10 @@ It is harder to read, understand, and maintain large HTML blocks. Another reason
 ```
 
 ## Prefer progressive enhancement and simplification over hacky or complex solutions
+
+This way we would get more stable and solid solutions while delivering best possible experience to the user.
+
+- [Progressive Enhancement: What It Is, And How To Use It?](https://www.smashingmagazine.com/2009/04/progressive-enhancement-what-it-is-and-how-to-use-it/)
 
 ### Bad
 ```html
@@ -85,6 +97,8 @@ It is harder to read, understand, and maintain large HTML blocks. Another reason
 
 ## Prefer native over custom
 
+It next to impossible deliver better UX then one, which was provided by browser vendors. You don't have vendor resources, both time and human, and rarely see all underwater rocks and aspects related to the specific problem. Also, native elements usually have much better performance.
+
 ### Bad
 ```html
 <div class="details">
@@ -134,6 +148,8 @@ It is harder to read, understand, and maintain large HTML blocks. Another reason
 
 ## Prefer valid over invalid
 
+Even if it looks fine in your browser, it can look broken entirely in users' one because error correction can work differently in different browsers. Also, it could be misleading for developers who will maintain this code.
+
 ### Bad
 ```html
 <dl>
@@ -167,6 +183,13 @@ It is harder to read, understand, and maintain large HTML blocks. Another reason
 ```
 
 ## Prefer presentation separated from structure
+
+It is easier to maintain code where structure and presentation are separated. Easier to read and understand it. It is better from an accessibility perspective. Better for SEO. I can name reasons all day long.
+
+- [Separation: The Web Designer’s Dilemma](https://alistapart.com/article/separationdilemma/)
+- [Developing With Web Standards – Recommendations and best practices](https://www.456bereastreet.com/lab/developing_with_web_standards/structure/)
+- [Separation of content and presentation](https://en.wikipedia.org/wiki/Separation_of_content_and_presentation)
+- [G140: Separating information and structure from presentation to enable different presentations](https://www.w3.org/TR/WCAG20-TECHS/G140.html#:~:text=While%20presentational%20features%20visually%20imply,%2C%20paragraphs%2C%20lists%2C%20etc.&text=Providing%20separate%20structure%2C%20functionality%2C%20and,determined%20via%20the%20structure%20layer.)
 
 ### Bad
 ```html
