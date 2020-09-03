@@ -148,7 +148,10 @@ It next to impossible deliver better UX then one, which was provided by browser 
 
 ## Prefer valid over invalid
 
-Even if it looks fine in your browser, it can look broken entirely in users' one because error correction can work differently in different browsers. Also, it could be misleading for developers who will maintain this code.
+Even if it looks fine in your browser, it can look broken entirely in users' one because error correction can work differently in different browsers. Also, it could be misleading for developers who will maintain this code. Potentially valid HTML could be better for SEO and accessibility.
+
+- [Why Validate?](https://validator.w3.org/docs/why.html)
+- [6 Reasons Why Google Says Valid HTML Matters](https://www.searchenginejournal.com/google-valid-html/)
 
 ### Bad
 ```html
