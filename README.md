@@ -162,7 +162,7 @@
 </dl>
 ```
 
-## Prefer to keep presentation separated from structure
+## Prefer presentation separated from structure
 
 ### Bad
 ```html
