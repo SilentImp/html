@@ -72,9 +72,8 @@ This way we would get more stable and solid solutions while delivering best poss
   const lineHeight = getLineHeight(truncateElement);
   
   while(lines * lineHeight < truncateElement.clientHeight) {
-    console.log(truncateTextParts.length, lines * lineHeight , truncateElement.clientHeight)
     truncateTextParts.pop();
-    truncateElement.innerHTML = truncateTextParts.join(' ') + '...';
+    truncateElement.innerHTML = truncateTextParts.join(' ') + '…';
   }
 </script>
 ```
@@ -190,7 +189,7 @@ Even if it looks fine in your browser, it can look broken entirely in users' one
 
 ## Prefer presentation separated from structure
 
-It is easier to maintain code where structure and presentation are separated. Easier to read and understand it. It is better from an accessibility perspective. Better for SEO. I can name reasons all day long.
+It is easier to maintain code where structure and presentation are separated. Easier to read and understand it. It is better from an accessibility perspective. Better for SEO.
 
 - [Separation: The Web Designer’s Dilemma](https://alistapart.com/article/separationdilemma/)
 - [Developing With Web Standards – Recommendations and best practices](https://www.456bereastreet.com/lab/developing_with_web_standards/structure/)
