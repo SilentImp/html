@@ -168,7 +168,7 @@
 ```html
 <ol class="steps">
   <li>Step 1</li>
-  <li class="separator">
+  <li>
     <div class="dashes">
       <div class="dash"></div>
       <div class="dash"></div>
@@ -180,7 +180,7 @@
   <li>Step 2</li>
 </ol>
 <style>
-  ol.steps {
+  .steps {
     list-style: none;
     display: flex;
     align-items: center;
@@ -229,7 +229,6 @@
     margin-top: -1px;
     border-top: 2px dashed red;
   }
-  
   .step:last-child::after {
     display: none;
   }
