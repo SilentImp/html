@@ -101,10 +101,12 @@ It next to impossible deliver better UX then one, which was provided by browser 
 
 1. It takes significantly more time to build a custom solution then use the native one.
 2. You can't integrate into system custom components in the same way native does.
-3. 3rd party dependencies can't be controlled.
+3. We can't control 3rd party dependencies.
 4. 3rd party libs often add size to the bundle.
 5. You can't predict where 3rd party will fail and don't know to what degree it accessible or support localization and internationalization. 
-6. Native components don't require to load JS bundle to work. So they are ready for interaction as soon as html loaded.
+6. Native components don't require to load the JS bundle to work. So they are ready for interaction as soon as HTML loaded.
+7. The performance of a native component would generally be much better than a custom one.
+8. New features and updates arrive with browser update.
 
 - [Do I need a custom select?](https://doineedacustomselect.com/)
 - [Under the spotlight: Select](https://modulz.app/blog/under-the-spotlight-select)
