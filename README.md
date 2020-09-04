@@ -200,9 +200,9 @@ It is easier to maintain code where structure and presentation are separated. Ea
 ```html
 <nav class="breadcrumbs">
   <ol>
-    <li>Home</li>
+    <li><a href="/home/">Home</a></li>
     <li>&rarr;</li>
-    <li>Cluster</li>
+    <li><a href="/home/cluster/">Cluster</a></li>
     <li>&rarr;</li>
     <li>Service</li>
   </ol>
@@ -224,8 +224,8 @@ It is easier to maintain code where structure and presentation are separated. Ea
 ```html
 <nav class="breadcrumbs">
   <ol>
-    <li>Home</li>
-    <li>Cluster</li>
+    <li><a href="/home/">Home</a></li>
+    <li><a href="/home/cluster/">Cluster</a></li>
     <li>Service</li>
   </ol>
 </nav>
