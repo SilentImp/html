@@ -103,7 +103,7 @@ It next to impossible deliver better UX then one, which was provided by browser 
 2. You can't integrate into system custom components in the same way native does.
 
 - [Do I need a custom select?](https://doineedacustomselect.com/)
-- [https://modulz.app/blog/under-the-spotlight-select](https://modulz.app/blog/under-the-spotlight-select)
+- [Under the spotlight: Select](https://modulz.app/blog/under-the-spotlight-select)
 
 ### Bad
 ```html
