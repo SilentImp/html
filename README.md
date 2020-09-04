@@ -99,7 +99,11 @@ This way, we would get more stable and solid solutions while delivering the user
 
 It next to impossible deliver better UX then one, which was provided by browser vendors. You don't have vendor resources, both time and human, and rarely see all underwater rocks and aspects related to the specific problem. Also, native elements usually have much better performance.
 
+1. It takes significantly more time to build a custom solution then use the native one.
+2. You can't integrate into system custom components in the same way native does.
+
 - [Do I need a custom select?](https://doineedacustomselect.com/)
+- [https://modulz.app/blog/under-the-spotlight-select](https://modulz.app/blog/under-the-spotlight-select)
 
 ### Bad
 ```html
