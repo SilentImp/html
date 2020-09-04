@@ -198,70 +198,50 @@ It is easier to maintain code where structure and presentation are separated. Ea
 
 ### Bad
 ```html
-<ol class="steps">
-  <li>Step 1</li>
-  <li>
-    <div class="dashes">
-      <div class="dash"></div>
-      <div class="dash"></div>
-      <div class="dash"></div>
-      <div class="dash"></div>
-      <div class="dash"></div>
-    </div>
-  </li>
-  <li>Step 2</li>
-</ol>
+<nav class="breadcrumbs">
+  <ol>
+    <li>Home</li>
+    <li>&rarr;</li>
+    <li>Cluster</li>
+    <li>&rarr;</li>
+    <li>Service</li>
+  </ol>
+</nav>
+
 <style>
-  .steps {
-    list-style: none;
+  .breadcrumbs ol{
     display: flex;
+    list-style: none;
     align-items: center;
   }
-  .dashes {
-    display: flex;
-    margin: 0 5px;
-  }
-  .dash {
-    width: 6px;
-    height: 2px;
-    background: red;
+  .breadcrumbs li{
     margin: 0 5px 0 0;
-  }
-  .dash:last-child {
-    margin-right: 0;
   }
 </style>
 ```
 
 ### Good
 ```html
-<ol class="steps">
-  <li class="step">Step 1</li>
-  <li class="step">Step 2</li>
-</ol>
+<nav class="breadcrumbs">
+  <ol>
+    <li>Home</li>
+    <li>Cluster</li>
+    <li>Service</li>
+  </ol>
+</nav>
 
 <style>
-  .steps {
-    list-style: none;
+  .breadcrumbs ol{
     display: flex;
+    list-style: none;
     align-items: center;
   }
-  .step {
-    position: relative;
-    margin-right: 60px;
+  .breadcrumbs li::after {
+    content: "→";
+    margin: 0 5px;
+    pointer-events: none;
   }
-  .step::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 100%;
-    top: 50%;
-    width: 50px;
-    margin-left: 5px;
-    margin-top: -1px;
-    border-top: 2px dashed red;
-  }
-  .step:last-child::after {
+  .breadcrumbs li:last-child::after {
     display: none;
   }
 </style>
