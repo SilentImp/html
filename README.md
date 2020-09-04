@@ -104,6 +104,7 @@ It next to impossible deliver better UX then one, which was provided by browser 
 3. 3rd party dependencies can't be controlled.
 4. 3rd party libs often add size to the bundle.
 5. You can't predict where 3rd party will fail and don't know to what degree it accessible or support localization and internationalization. 
+6. Native components don't require to load JS bundle to work. So they are ready for interaction as soon as html loaded.
 
 - [Do I need a custom select?](https://doineedacustomselect.com/)
 - [Under the spotlight: Select](https://modulz.app/blog/under-the-spotlight-select)
