@@ -20,7 +20,7 @@ It is harder to read, understand, and maintain large HTML blocks. Another reason
 
 ## Prefer semantic elements over non-semantic
 
-It easier to read, understand, and maintain semantic HTML. Also it's better for acessability, for example screen readers. And all kind of robots and parsers. Including search engine spiders. 
+It is easier to read, understand, and maintain semantic HTML. Also, it's better for accessibility, for example, screen readers. And all kinds of robots and parsers. Including search engine spiders. 
 
 - [The practical value of semantic HTML](https://www.brucelawson.co.uk/2018/the-practical-value-of-semantic-html/)
 - [HTML: A good basis for accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML)
@@ -40,7 +40,7 @@ It easier to read, understand, and maintain semantic HTML. Also it's better for 
 
 ## Prefer progressive enhancement and simplification over hacky or complex solutions
 
-This way we would get more stable and solid solutions while delivering best possible experience to the user.
+This way, we would get more stable and solid solutions while delivering the user's best possible experience.
 
 - [Progressive Enhancement: What It Is, And How To Use It?](https://www.smashingmagazine.com/2009/04/progressive-enhancement-what-it-is-and-how-to-use-it/)
 - [Do websites need to look exactly the same in every browser?](http://dowebsitesneedtolookexactlythesameineverybrowser.com/)
@@ -144,7 +144,7 @@ It next to impossible deliver better UX then one, which was provided by browser 
 ```html
 <details>
   <summary>We are the working dead</summary>
-  Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro.
+  Zombie Ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro.
 </details>
 ```
 
@@ -187,7 +187,7 @@ Even if it looks fine in your browser, it can look broken entirely in users' one
 </dl>
 ```
 
-## Prefer presentation separated from structure
+## Prefer presentation separated from the structure
 
 It is easier to maintain code where structure and presentation are separated. Easier to read and understand it. It is better from an accessibility perspective. Better for SEO.
 
