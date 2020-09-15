@@ -8,14 +8,17 @@ It is harder to read, understand, and maintain large HTML blocks. Another reason
 
 ### Avoid
 ```html
-<div>
-  <p>Text.</p>
+
+<div class="outer-margin">
+  <div class="inner-padding">
+    <p>We are the working dead</p>
+  </div>
 </div>
 ```
 
 ### Prefer
 ```html
-<p>Text.</p>
+<p class="description">We are the working dead</p>
 ```
 
 ## Prefer semantic elements over non-semantic
