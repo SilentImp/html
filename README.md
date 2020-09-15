@@ -6,14 +6,14 @@ It is harder to read, understand, and maintain large HTML blocks. Another reason
 
 - [Avoid an excessive DOM size](https://web.dev/dom-size/)
 
-### Bad
+### Avoid
 ```html
 <div>
   <p>Text.</p>
 </div>
 ```
 
-### Good
+### Prefer
 ```html
 <p>Text.</p>
 ```
@@ -28,12 +28,12 @@ It is easier to read, understand, and maintain semantic HTML. Also, it's better 
 - [The SEO Advantages of Machine-Readable HTML5 Semantic Markup](https://searchengineland.com/seo-advantages-of-machine-readable-html5-semantic-markup-314455)
 - [Semantics in HTML 5](https://alistapart.com/article/semanticsinhtml5/)
 
-### Bad
+### Avoid
 ```html
 <span>20 minutes ago.</span>
 ```
 
-### Good
+### Prefer
 ```html
 <time datetime="2020-09-01T20:00:00">20 minutes ago.</time>
 ```
@@ -45,7 +45,7 @@ This way, we would get more stable and solid solutions while delivering the user
 - [Progressive Enhancement: What It Is, And How To Use It?](https://www.smashingmagazine.com/2009/04/progressive-enhancement-what-it-is-and-how-to-use-it/)
 - [Do websites need to look exactly the same in every browser?](http://dowebsitesneedtolookexactlythesameineverybrowser.com/)
 
-### Bad
+### Avoid
 ```html
 <p data-lines="3" class="abstract">Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.</p>
 <style>
@@ -78,7 +78,7 @@ This way, we would get more stable and solid solutions while delivering the user
 </script>
 ```
 
-### Good
+### Prefer
 ```html
 <p class="abstract">Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.</p>
 <style>
@@ -112,7 +112,7 @@ It next to impossible deliver better UX then one, which was provided by browser 
 - [Do I need a custom select?](https://doineedacustomselect.com/)
 - [Under the spotlight: Select](https://modulz.app/blog/under-the-spotlight-select)
 
-### Bad
+### Avoid
 ```html
 <div class="details">
   <h2>We are the working dead</h2>
@@ -151,7 +151,7 @@ It next to impossible deliver better UX then one, which was provided by browser 
 </style>
 ```
 
-### Good
+### Prefer
 ```html
 <details>
   <summary>We are the working dead</summary>
@@ -166,7 +166,7 @@ Even if it looks fine in your browser, it can look broken entirely in users' one
 - [Why Validate?](https://validator.w3.org/docs/why.html)
 - [6 Reasons Why Google Says Valid HTML Matters](https://www.searchenginejournal.com/google-valid-html/)
 
-### Bad
+### Avoid
 ```html
 <dl>
   <h1>Dictionary</h1>
@@ -182,7 +182,7 @@ Even if it looks fine in your browser, it can look broken entirely in users' one
 </dl>
 ```
 
-### Good
+### Prefer
 ```html
 <h1>Dictionary</h1>
 
@@ -207,7 +207,7 @@ It is easier to maintain code where structure and presentation are separated. Ea
 - [Separation of content and presentation](https://en.wikipedia.org/wiki/Separation_of_content_and_presentation)
 - [G140: Separating information and structure from presentation to enable different presentations](https://www.w3.org/TR/WCAG20-TECHS/G140.html#:~:text=While%20presentational%20features%20visually%20imply,%2C%20paragraphs%2C%20lists%2C%20etc.&text=Providing%20separate%20structure%2C%20functionality%2C%20and,determined%20via%20the%20structure%20layer.)
 
-### Bad
+### Avoid
 ```html
 <nav class="breadcrumbs">
   <ol>
@@ -231,7 +231,7 @@ It is easier to maintain code where structure and presentation are separated. Ea
 </style>
 ```
 
-### Good
+### Prefer
 ```html
 <nav class="breadcrumbs">
   <ol>
