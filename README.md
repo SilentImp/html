@@ -100,9 +100,9 @@ This way, we would get more stable and solid solutions while delivering the user
 
 ## Prefer native over custom
 
-It next to impossible deliver better UX then one, which was provided by browser vendors. You don't have vendor resources, both time and human, and rarely see all underwater rocks and aspects related to the specific problem. Also, native elements usually have much better performance.
+It next to impossible deliver better UX than one, which was provided by browser vendors. You don't have vendor resources, both time and human, and rarely see all underwater rocks and aspects related to the specific problem. Also, native elements usually have much better performance.
 
-1. It takes significantly more time to build a custom solution then use the native one.
+1. It takes significantly more time to build a custom solution than use the native one.
 2. You can't integrate into system custom components in the same way native does.
 3. We can't control 3rd party dependencies.
 4. 3rd party libs often add size to the bundle.
