@@ -125,7 +125,6 @@ It next to impossible deliver better UX then one, which was provided by browser 
 </div>
 <script>
   const toggler = (event) => {
-  console.log(event.currentTarget.nextElementSibling.classList)
   event.currentTarget.parentNode.classList.toggle("details-open");
   }
   document.querySelectorAll(".details").forEach((element) => {
