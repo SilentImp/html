@@ -1,3 +1,8 @@
+<p align="center">
+  <span>English</span> |
+  <a href="https://github.com/SilentImp/html/blob/master/rus.md">Pусский</a>
+</p>
+
 # HTML recommendations and best practices
 
 ## Prefer fewer elements over more elements
