@@ -1,3 +1,8 @@
+<p align="center">
+  <span>Pусский</span> |
+  <a href="https://github.com/SilentImp/html">English</a>
+</p>
+
 # HTML рекомендации и наилучшие практики
 
 ## Предпочитайте меньшее количество элементов большему
