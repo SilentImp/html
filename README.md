@@ -1,7 +1,5 @@
-<p align="center">
-  <span>English</span> |
-  <a href="https://github.com/SilentImp/html/blob/master/rus.md">Pусский</a>
-</p>
+Read this in other languages: English | [Pусский](https://github.com/SilentImp/html/blob/master/README.ru.md)
+
 
 # HTML recommendations and best practices
 
@@ -254,13 +252,10 @@ It is easier to maintain code where structure and presentation are separated. Ea
     list-style: none;
     align-items: center;
   }
-  .breadcrumbs li::after {
+  .breadcrumbs li:not(:last-child):after {
     content: "→";
     margin: 0 5px;
     pointer-events: none;
-  }
-  .breadcrumbs li:last-child::after {
-    display: none;
   }
 </style>
 ```

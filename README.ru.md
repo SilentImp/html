@@ -1,7 +1,4 @@
-<p align="center">
-  <span>Pусский</span> |
-  <a href="https://github.com/SilentImp/html">English</a>
-</p>
+На других языках: [English](https://github.com/SilentImp/html/blob/master/README.md) | Pусский
 
 # HTML рекомендации и наилучшие практики
 
@@ -253,13 +250,10 @@
     list-style: none;
     align-items: center;
   }
-  .breadcrumbs li::after {
+  .breadcrumbs li:not(:last-child):after {
     content: "→";
     margin: 0 5px;
     pointer-events: none;
-  }
-  .breadcrumbs li:last-child::after {
-    display: none;
   }
 </style>
 ```
