@@ -1,5 +1,8 @@
-Read this in other languages: English | [Pусский](https://github.com/SilentImp/html/blob/master/README.ru.md)
-
+<p align="center">
+  English |
+  <a href="https://github.com/SilentImp/html/blob/master/README.ua.md">Українська</a> |
+  <a href="https://github.com/SilentImp/html/blob/master/README.ru.md">Pусский</a>
+</p>
 
 # HTML recommendations and best practices
 
@@ -21,7 +24,9 @@ It is harder to read, understand, and maintain large HTML blocks. Another reason
 
 ### Prefer
 ```html
-<p class="description">We are the working dead</p>
+<div class="description">
+  <p>We are the working dead</p>
+</div>
 ```
 
 ## Prefer semantic elements over non-semantic
