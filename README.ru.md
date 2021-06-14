@@ -1,4 +1,8 @@
-На других языках: [English](https://github.com/SilentImp/html/blob/master/README.md) | Pусский
+<p align="center">
+  <a href="https://github.com/SilentImp/html/blob/master/README.md">English</a> |
+  <a href="https://github.com/SilentImp/html/blob/master/README.ua.md">Українська</a> |
+  Pусский
+</p>
 
 # HTML рекомендации и наилучшие практики
 
@@ -19,7 +23,9 @@
 
 ### Предпочтительно
 ```html
-<p class="description">Мы рабы на галерах.</p>
+<div class="description">
+  <p>Мы рабы на галерах.</p>
+</div>
 ```
 
 ## Cемантически корректные элементы предпочтительнее элементов общего назначения
