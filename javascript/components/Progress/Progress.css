@@ -1,0 +1,50 @@
+:host {
+  --progress-height: 5px;
+  --progress-foreground: #d00;
+  --progress-background: transparent;
+  --progress-opacity: .75;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: var(--progress-height);
+  visibility: hidden;
+  z-index: 5;
+}
+
+:host-context(.fullscreen) {
+  visibility: visible;
+}
+
+@supports not selector(:host-context(*)) {
+  :host(.fullscreen) {
+    visibility: visible;
+  }  
+}
+
+:host progress{
+  position: absolute;
+  top: 0;
+  left:0;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100vw;
+  height: var(--progress-height);
+  opacity: var(--progress-opacity);
+  background-color: var(--progress-background);
+  border: none;
+}
+
+:host progress::-moz-progress-bar {
+  background-color: var(--progress-foreground);
+}
+
+:host progress::-webkit-progress-bar {
+  background-color: var(--progress-background);
+}
+
+:host progress::-webkit-progress-value {
+  background-color: var(--progress-foreground);
+}

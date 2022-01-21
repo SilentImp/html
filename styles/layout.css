@@ -1,0 +1,42 @@
+body {
+  background:
+    linear-gradient(135deg, var(--add-bgc) 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, var(--add-bgc) 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, var(--add-bgc) 25%, transparent 25%),
+    linear-gradient(45deg, var(--add-bgc) 25%, transparent 25%);
+    background-size: 100px 100px;
+  background-color: var(--common-bgc);
+}
+
+main {
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  position: relative;
+  display: grid;
+  justify-content: left;
+  align-content: start;
+
+  gap: var(--slide-gap);
+  grid-template-columns: repeat(auto-fit, min(100vw - ( var(--slide-gap) * 2 ), var(--column-width)));
+  box-sizing: border-box;
+  padding: var(--slide-gap);
+  align-items: start;
+}
+
+@media print {
+  body {
+    background: var(--light-color);
+  }
+
+  main {
+    width: var(--slide-width);
+    max-width: var(--slide-width);
+    min-width: var(--slide-width);
+    display: block;
+    padding: 0;
+  }
+}

@@ -1,0 +1,18 @@
+:host {
+  background-color: transparent;
+}
+
+.exgibitionist-slide__content {
+  padding: 0;
+}
+
+img{
+  width: var(--slide-width);
+  aspect-ratio: var(--slide-ratio);
+  object-fit: cover;
+}
+
+:host([data-contain]) img {
+  object-fit: contain;
+  background-color: var(--slide-bgc);
+}

@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Presentation description">
+    <link rel="stylesheet" href="/html/styles/SlideController.css">
+    <title>Presentation</title>
+  </head>
+  <body>
+    <!-- We have headers inside title slides -->
+    <!-- <h1 class="presentation-title">HTML Best Practice</h1> -->
+    <main role="list">
+      <ex-title role="listitem" >HTML Best Practice</ex-title>
+      
+      <ex-illustration data-src="images/3whales-t.png" data-alt="" role="listitem"></ex-illustration>
+      
+      <ex-screen data-src="images/2days.png" data-alt="" role="listitem"></ex-screen>
+      
+      <ex-illustration data-src="images/whaling.png" data-alt="" role="listitem"></ex-illustration>
+      
+      <ex-screen data-src="images/15years.png" data-alt="" role="listitem"></ex-screen>
+
+      <ex-illustration data-contain="" data-src="images/tools.jpeg" data-alt="" role="listitem"></ex-illustration>
+
+      <ex-title data-level="2" role="listitem" >Prefer fewer elements over more elements</ex-title>
+
+      <ex-screen data-src="images/mui-toggle-angular.png" data-alt="" role="listitem"></ex-screen>
+
+      <ex-code data-code="16" role="listitem">
+        <script class="language-html" type="text/plain">
+          <mat-slide-toggle class="mat-slide-toggle mat-accent" id="mat-slide-toggle-1">
+            <label class="mat-slide-toggle-label" for="mat-slide-toggle-1-input">
+              <div class="mat-slide-toggle-bar">
+                <input type="checkbox" role="switch" 
+                  class="mat-slide-toggle-input cdk-visually-hidden" 
+                  id="mat-slide-toggle-1-input" 
+                  tabindex="0" aria-checked="false">
+                <div class="mat-slide-toggle-thumb-container">
+                  <div class="mat-slide-toggle-thumb"></div>
+                  <div mat-ripple="" class="mat-ripple mat-slide-toggle-ripple mat-focus-indicator">
+                    <div class="mat-ripple-element mat-slide-toggle-persistent-ripple"></div>
+                  </div>
+                </div>
+              </div>
+              <span class="mat-slide-toggle-content">
+                <span style="display: none;">&nbsp;</span>
+                Slide me!
+              </span>
+            </label>
+          </mat-slide-toggle>
+        </script>
+      </ex-code>
+
+      <ex-code data-code="16" role="listitem">
+        <script class="language-html" data-line="16" type="text/plain">
+          <mat-slide-toggle class="mat-slide-toggle mat-accent" id="mat-slide-toggle-1">
+            <label class="mat-slide-toggle-label" for="mat-slide-toggle-1-input">
+              <div class="mat-slide-toggle-bar">
+                <input type="checkbox" role="switch" 
+                  class="mat-slide-toggle-input cdk-visually-hidden" 
+                  id="mat-slide-toggle-1-input" 
+                  tabindex="0" aria-checked="false">
+                <div class="mat-slide-toggle-thumb-container">
+                  <div class="mat-slide-toggle-thumb"></div>
+                  <div mat-ripple="" class="mat-ripple mat-slide-toggle-ripple mat-focus-indicator">
+                    <div class="mat-ripple-element mat-slide-toggle-persistent-ripple"></div>
+                  </div>
+                </div>
+              </div>
+              <span class="mat-slide-toggle-content">
+                <span style="display: none;">&nbsp;</span>
+                Slide me!
+              </span>
+            </label>
+          </mat-slide-toggle>
+        </script>
+      </ex-code>
+
+      <ex-illustration data-src="images/bored.png" data-alt="" role="listitem">
+        <h2 class="cloud-count cloud cloud--right">14!</h2>
+      </ex-illustration>
+
+      <ex-screen data-src="images/mui-toggle-react.png" data-alt="" role="listitem"></ex-screen>
+
+      <ex-code data-code="16" role="listitem">
+        <script class="language-html" type="text/plain">
+          <label class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1jaw3da">
+            <span class="MuiSwitch-root MuiSwitch-sizeMedium css-ecvcn9">
+              <span class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root 
+                           MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root 
+                           Mui-checked css-1nr2wod">
+                <input type="checkbox" checked="" 
+                       class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3">
+                <span class="MuiSwitch-thumb css-19gndve"></span>
+                <span class="MuiTouchRipple-root css-w0pj6f"></span>
+              </span>
+              <span class="MuiSwitch-track css-1ju1kxc"></span>
+            </span>
+            <span class="MuiTypography-root MuiTypography-body1 
+                         MuiFormControlLabel-label css-9l3uo3">Label</span>
+          </label>
+        </script>
+      </ex-code>
+
+      <ex-code data-code="16" role="listitem">
+        <script class="language-html" data-line="3-4" type="text/plain">
+          <label class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-1jaw3da">
+            <span class="MuiSwitch-root MuiSwitch-sizeMedium css-ecvcn9">
+              <span class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root 
+                           MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root 
+                           Mui-checked css-1nr2wod">
+                <input type="checkbox" checked="" 
+                       class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3">
+                <span class="MuiSwitch-thumb css-19gndve"></span>
+                <span class="MuiTouchRipple-root css-w0pj6f"></span>
+              </span>
+              <span class="MuiSwitch-track css-1ju1kxc"></span>
+            </span>
+            <span class="MuiTypography-root MuiTypography-body1 
+                         MuiFormControlLabel-label css-9l3uo3">Label</span>
+          </label>
+        </script>
+      </ex-code>
+
+      <ex-illustration data-src="images/bored.png" data-alt="" role="listitem">
+        <h2 class="cloud-count cloud cloud--right">8!</h2>
+      </ex-illustration>
+
+      <ex-code data-code="42" role="listitem">
+        <script class="language-html" type="text/plain">
+          <label>
+            <input type="checkbox" />
+            Label
+          </label>
+        </script>
+      </ex-code>
+
+      <ex-illustration data-src="images/bored.png" data-alt="" role="listitem">
+        <h2 class="cloud-count cloud cloud--right">2!</h2>
+      </ex-illustration>
+
+
+      <ex-slide data-click class="demo-7">
+        <form class="zoom">
+          <label>
+            <input type="checkbox" />
+            Label
+          </label>
+        </form>
+      </ex-slide>
+
+      <ex-slide data-click class="demo-7 demo-7-styled">
+        <form class="zoom">
+          <label>
+            <input type="checkbox" />
+            Label
+          </label>
+        </form>
+      </ex-slide>
+
+      <ex-slide data-split data-click>
+        <div class="half">
+          <div class="wrapper">
+            <img class="logotype" height="200" src="images/htmlhell-logotype.svg" alt=""/>
+            <h1>HTML Hell</h1>
+          </div>
+        </div>
+        <div class="half">
+          <img class="book-qrcode" src="images/htmlhell.svg" alt="QR-Code with link to the HTML Hell">
+          <a aria-label="Open portal to HTML Hell" target="_blank" data-click href="https://www.htmhell.dev/">Check HTML hell out!</a>
+        </div>
+      </ex-slide>
+
+      <ex-slide data-split data-click>
+        <div class="half">
+          <div class="wrapper">
+            <h2>CSS Challenges</h2>
+          </div>
+        </div>
+        <div class="half">
+          <img class="book-qrcode" src="images/csschallenge.svg" alt="QR-Code with link to the CSS Challenge">
+          <a aria-label="Take CSS Challenges!" target="_blank" data-click href="https://css-challenges.com/">Take CSS Challenges!</a>
+        </div>
+      </ex-slide>
+
+      <ex-title data-level="2" role="listitem" >Prefer semantic elements over non-semantic</ex-title>
+
+      <ex-illustration data-src="images/elements.png" data-alt="" role="listitem"></ex-illustration>
+
+      <ex-illustration data-contain data-src="images/spread.png" data-alt="" role="listitem"></ex-illustration>
+
+      <ex-screen data-src="images/news.png" data-alt="" role="listitem"></ex-screen>
+
+      <ex-code data-code="28" role="listitem">
+        <script class="language-html" type="text/plain">
+          <div class="article_news_list">
+            <div class="article_time">15:28</div>
+              <div class="article_content">
+                  <div class="article_header">
+                    <a href="…" target="_blank">…</a>
+                  </div>
+                  <div class="article_subheader">…</div>
+              </div>
+          </div>
+        </script>
+      </ex-code>
+
+      <ex-code data-code="28" role="listitem">
+        <script class="language-html" data-line="1" type="text/plain">
+          <div class="article_news_list">
+            <div class="article_time">15:28</div>
+              <div class="article_content">
+                  <div class="article_header">
+                    <a href="…" target="_blank">…</a>
+                  </div>
+                  <div class="article_subheader">…</div>
+              </div>
+          </div>
+        </script>
+      </ex-code>
+
+      <ex-code data-code="28" role="listitem">
+        <script class="language-html" data-line="2" type="text/plain">
+          <div class="article_news_list">
+            <div class="article_time">15:28</div>
+              <div class="article_content">
+                  <div class="article_header">
+                    <a href="…" target="_blank">…</a>
+                  </div>
+                  <div class="article_subheader">…</div>
+              </div>
+          </div>
+        </script>
+      </ex-code>
+
+      <ex-code data-code="28" role="listitem">
+        <script class="language-html" data-line="4" type="text/plain">
+          <div class="article_news_list">
+            <div class="article_time">15:28</div>
+              <div class="article_content">
+                  <div class="article_header">
+                    <a href="…" target="_blank">…</a>
+                  </div>
+                  <div class="article_subheader">…</div>
+              </div>
+          </div>
+        </script>
+      </ex-code>
+
+
+      <ex-code data-code="28" role="listitem">
+        <script class="language-html" data-line="7" type="text/plain">
+          <div class="article_news_list">
+            <div class="article_time">15:28</div>
+              <div class="article_content">
+                  <div class="article_header">
+                    <a href="…" target="_blank">…</a>
+                  </div>
+                  <div class="article_subheader">…</div>
+              </div>
+          </div>
+        </script>
+      </ex-code>
+
+      <ex-screen data-src="images/guardian.png" data-alt="" role="listitem"></ex-screen>
+
+      <ex-code data-code="20" role="listitem">
+        <script class="language-html" data-line="3" type="text/plain">
+          <div class="dcr-km9fgb">
+            <div class="dcr-1i26ibw">
+              <label for="dateToggle" class="dcr-hn0k3p">
+                Fri 21 Jan 2022 10.11 GMT
+              </label>
+              <input type="checkbox" id="dateToggle" class="dcr-miumx2">
+              <p class="dcr-vdb1rb">
+                First published on Fri 21 Jan 2022 09.42 GMT
+              </p>
+            </div>
+          </div>
+        </script>
+      </ex-code>
+
+      <ex-slide data-split data-click>
+        <div class="half">
+          <div class="wrapper">
+            <h1>Web Almanac</h1>
+          </div>
+        </div>
+        <div class="half">
+          <img class="book-qrcode" src="images/almanac.svg" alt="QR-Code with link to the Web Almanac">
+          <a aria-label="Open Web Almanac" target="_blank" data-click href="https://almanac.httparchive.org/en/2021/markup">Read the Web Almanac!</a>
+        </div>
+      </ex-slide>
+
+      <ex-title data-level="2" role="listitem" >Prefer progressive enhancement and simplification over hacky or complex solutions</ex-title>
+
+      <ex-screen data-src="images/sticky.png" data-alt="" role="listitem"></ex-screen>
+
+      <ex-screen data-src="images/sticky-phobia.png" data-alt="" role="listitem"></ex-screen>
+
+      <ex-code data-code="48" role="listitem">
+        <script class="language-css" type="text/plain">
+          .article-header {
+            position: sticky;
+          }
+        </script>
+      </ex-code>
+
+      <ex-screen data-src="images/sticky-support.png" data-alt="" role="listitem"></ex-screen>
+
+      <ex-title data-level="2" role="listitem" >Prefer native over custom</ex-title>
+
+      <ex-screen data-src="images/modal.png" data-alt="" role="listitem"></ex-screen>
+      <ex-screen data-src="images/react-modal-inside.png" data-alt="" role="listitem"></ex-screen>
+      <ex-screen data-src="images/react-modal.png" data-alt="" role="listitem"></ex-screen>
+
+      <ex-screen data-src="images/html-dialog.png" data-alt="" role="listitem"></ex-screen>
+      <ex-screen data-src="images/html-dialog-support.png" data-alt="" role="listitem"></ex-screen>
+      
+      <ex-screen data-src="images/html-dialog-poly.png" data-alt="" role="listitem"></ex-screen>
+
+      <ex-code data-code="32" role="listitem">
+        <script class="language-html" type="text/plain">
+          <dialog id="dialog">
+            <form method="dialog">
+              <p>Merry Christmas!</p>
+              <button>Ok</button>
+            </form>
+          </dialog>
+          <button id="open-dialog">
+            Open modal!
+          </button>
+        </script>
+      </ex-code>
+
+      <ex-code data-code="32" role="listitem">
+        <script class="language-html" data-line="1" type="text/plain">
+          <dialog id="dialog" open>
+            <form method="dialog">
+              <p>Merry Christmas!</p>
+              <button>Ok</button>
+            </form>
+          </dialog>
+          <button id="open-dialog">
+            Open modal!
+          </button>
+        </script>
+      </ex-code>
+
+      <ex-code data-code="32" role="listitem">
+        <script class="language-html" data-line="2" type="text/plain">
+          <dialog id="dialog" open>
+            <form method="dialog">
+              <p>Merry Christmas!</p>
+              <button>Ok</button>
+            </form>
+          </dialog>
+          <button id="open-dialog">
+            Open modal!
+          </button>
+        </script>
+      </ex-code>
+
+      <ex-code data-code="20" role="listitem">
+        <script class="language-js" data-line="3" type="text/plain">
+          const showModalButton = document.getElementById('open-dialog');
+          const dialog = document.getElementById('dialog');
+          const showModalHandler = () => dialog.showModal();
+          showModalButton.addEventListener('click', showModalHandler);
+        </script>
+      </ex-code>
+      
+      <ex-slide data-click class="demo-1">
+        <dialog id="dialog-1">
+          <form method="dialog">
+            <p>Merry Christmas!</p>
+            <button>Ok</button>
+          </form>
+        </dialog>
+        <button id="button-1">Open modal!</button>
+        <script>
+          const button1 = document.getElementById('button-1');
+          const dialog1 = document.getElementById('dialog-1');
+          button1.addEventListener('click', ()=>dialog1.showModal());
+        </script>
+      </ex-slide>
+
+      <ex-code data-code="36" role="listitem">
+        <script class="language-css" data-line="5" type="text/plain">
+          dialog {
+            /* … */
+            backdrop-filter: blur(1rem);
+          }
+          dialog::backdrop {
+            background-color: #4008;
+            mix-blend-mode: multiply;
+          }
+        </script>
+      </ex-code>
+
+      <ex-slide data-click class="demo-2">
+        <dialog id="dialog-2">
+          <form method="dialog">
+            <p>Merry Christmas!</p>
+            <button>Ok</button>
+          </form>
+        </dialog>
+        <button id="button-2">
+          Open modal!
+        </button>
+        <script>
+          const button2 = document.getElementById('button-2');
+          const dialog2 = document.getElementById('dialog-2');
+          button2.addEventListener('click', ()=>dialog2.showModal());
+        </script>
+      </ex-slide>
+
+      <ex-slide data-split data-click>
+        <div class="half">
+          <h1>Dialog</h1>
+        </div>
+        <div class="half">
+          <img class="book-qrcode" src="images/dialog.svg" alt="QR-Code with link to the spec">
+          <a aria-label="Read about dialog element in the HTML spec" target="_blank" data-click href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element">Read about dialog element in the HTML spec</a>
+        </div>
+      </ex-slide>
+
+      <ex-slide data-split data-click>
+        <div class="half">
+          <h1>Open UI</h1>
+        </div>
+        <div class="half">
+          <img class="book-qrcode" src="images/openui.svg" alt="QR-Code with link to the Open UI">
+          <a aria-label="Read about Open UI" target="_blank" data-click href="https://open-ui.org/">Read about Open UI</a>
+        </div>
+      </ex-slide>
+
+      <ex-title data-level="2" role="listitem" >Prefer valid over invalid</ex-title>
+
+      <ex-illustration data-src="images/fish.jpeg" data-alt="" role="listitem">
+        <h2 class="cloud-fish-0 cloud">Why?<br>Browsers<br>are smart!</h2>
+      </ex-illustration>
+
+      <ex-code data-code="42" role="listitem">
+        <script class="language-html" type="text/plain">
+          <p>The odyssey of a devoted
+             palm-wine <del>drinker through
+             nightmare of adventure.</p>
+          <p>Dead Palm-Wine</del> Tapster
+             in the Deads Town</p>
+        </script>
+      </ex-code>
+
+      <ex-slide class="demo-3">
+        <p>The odyssey of a devoted
+          palm-wine <del>drinker through
+          nightmare of adventure.</del></p>
+        <p><del>Dead Palm-Wine</del> Tapster<br>
+          in the Deads Town</p>
+      </ex-slide>
+
+      <ex-slide class="demo-3">
+        <p>The odyssey of a devoted
+          palm-wine <del>drinker through
+          nightmare of adventure.</p>
+        <p><ins>Dead Palm-Wine</ins> Tapster<br>
+          in the Deads Town</p>
+      </ex-slide>
+
+      <ex-code data-code="36" role="listitem">
+        <script class="language-html"  data-line="3,4" type="text/plain">
+          <p>The odyssey of a devoted
+             palm-wine <del>drinker through
+             nightmare of adventure.</del></p>
+          <p><del>Dead Palm-Wine</del>
+             Tapster in the Deads Town</p>
+        </script>
+      </ex-code>
+
+      <ex-slide class="demo-3">
+        <p>The odyssey of a devoted
+          palm-wine <del>drinker through
+          nightmare of adventure.</del></p>
+        <p><del>Dead Palm-Wine</del> Tapster<br>
+          in the Deads Town</p>
+      </ex-slide>
+
+      <ex-illustration data-src="images/fish.jpeg" data-alt="" role="listitem">
+        <h2 class="cloud">It's<br>easy!</h2>
+      </ex-illustration>
+
+      <ex-code data-code="24" role="listitem">
+        <script class="language-html" type="text/plain">
+          <table>
+            <h2>Population</h2>
+            <tr><td>Japan</td><td>125,360,000</td></tr>
+            <tr><td>Germany</td><td>83,190,556</td></tr>
+            <h2>Area</h2>
+            <tr><td>Japan</td><td>377,975 km<sup>2</sup></td></tr>
+            <tr><td>Germany</td><td>357,022 km<sup>2</sup></td></tr>
+          </table>
+        </script>
+      </ex-code>
+
+      <ex-slide class="demo-4">
+        <table>
+          <h2>Population</h2>
+          <tr><td>Japan  </td> <td>125,360,000</td></tr>
+          <tr><td>Germany</td> <td>83,190,556</td></tr>
+          <h2>Area</h2>
+          <tr><td>Japan  </td> <td>377,975 km<sup>2</sup></td></tr>
+          <tr><td>Germany</td> <td>357,022 km<sup>2</sup></td></tr>
+        </table>
+      </ex-slide>
+
+      <ex-code data-code="24" role="listitem">
+        <script class="language-html" data-line="2" type="text/plain">
+          <table>
+            <tr><th colspan="2">Population</th></tr>
+            <tr>
+              <td>Japan</td>
+              <td>125,360,000</td>
+            </tr>
+            <tr>
+              <td>Germany</td>
+              <td>83,190,556</td>
+            </tr>
+            <!-- … -->
+          </table>
+        </script>
+      </ex-code>
+
+      <ex-slide class="demo-4 demo-4-2">
+        <table>
+          <tr><th colspan="2">Population</th></tr>
+          <tr>
+            <td>Japan  </td> <td>125,360,000</td>
+          </tr><tr>
+            <td>Germany</td> <td>83,190,556</td>
+          </tr>
+          <tr><th colspan="2">Area</th></tr>
+          <tr>
+            <td>Japan  </td> <td>377,975 km<sup>2</sup></td>
+          </tr><tr>
+            <td>Germany</td> <td>357,022 km<sup>2</sup></td>
+          </tr>
+        </table>
+      </ex-slide>
+
+      <ex-illustration data-src="images/fish.jpeg" data-alt="" role="listitem">
+        <h2 class="cloud-fish-2 cloud cloud--right">I knew<br>it!</h2>
+      </ex-illustration>
+
+      <ex-code data-code="22" role="listitem">
+        <script class="language-html" type="text/plain">
+          <select name="order">
+            <option>
+              <input type="checkbox" value="engine-oil" />
+              Change oil
+            </option>
+            <option>
+              <input type="checkbox" value="brakes-fluid" />
+              Change brakes fluid
+            </option>
+            <option>
+              <input type="checkbox" value="fork-oil" />
+              Change fork oil
+            </option>
+          </select>
+        </script>
+      </ex-code>
+
+      <ex-slide class="demo-5">
+        <div class="zoom">
+        <select name="order">
+          <option>
+            <input type="checkbox" value="engine-oil" />
+            Change oil
+          </option>
+          <option>
+            <input type="checkbox" value="brakes-fluid" />
+            Change brakes fluid
+          </option>
+          <option>
+            <input type="checkbox" value="fork-oil" />
+            Change fork oil
+          </option>
+        </select>
+      </div>
+      </ex-slide>
+
+      <ex-code data-code="22" role="listitem">
+        <script class="language-html" data-line="1" type="text/plain">
+          <select name="order" multiple>
+            <option value="engine-oil">
+              Change oil
+            </option>
+            <option value="brakes-fluid">
+              Change brakes fluid
+            </option>
+            <option value="fork-oil">
+              Change fork oil
+            </option>
+          </select>
+        </script>
+      </ex-code>
+
+      <ex-slide data-click class="demo-6">
+        <select name="order" multiple>
+          <option value="engine-oil">
+            Change oil
+          </option>
+          <option value="brakes-fluid">
+            Change brakes fluid
+          </option>
+          <option value="fork-oil">
+            Change fork oil
+          </option>
+        </select>
+      </ex-slide>
+
+      <ex-illustration data-src="images/fish-2.jpeg" data-alt="" role="listitem">
+        <h2 class="cloud-fish-3 cloud cloud--right">Please,<br>consider<br>reading<br>the spec!</h2>
+      </ex-illustration>
+
+      <ex-illustration data-src="images/fish-2.jpeg" data-alt="" role="listitem">
+        <h2 class="cloud-fish-4 cloud cloud--right">Please!</h2>
+      </ex-illustration>
+
+      <ex-screen data-src="images/options-spec.png" data-alt="" role="listitem"></ex-screen>
+
+      <ex-title data-level="2" role="listitem" >Prefer presentation separated from the structure</ex-title>
+
+      <ex-illustration data-src="images/3whales-t.png" data-alt="" role="listitem"></ex-illustration>
+
+      <ex-code data-code="10" role="listitem">
+        <script class="language-html" type="text/plain">
+          <div class="sb-contentColumn sb-global-gutters mx-auto sb-contentColumn--xlarge px0 my5" id="137-76037">
+            <div class="sb-contentColumn__inner">
+              <div class="md-flex image-content-block_flexRowReverse__3mz0m">
+                <div class="flex justify-center items-center md-size6of12" 
+                     style="background-color:#006241">
+                  <img alt="A man holding a Starbucks drink while fireworks burst around him." 
+                       class="block" src="…">
+                </div>
+                <div class="py5 flex items-center justify-center text-center md-size6of12 textBlockGutter" 
+                    style="background-color:#006241">
+                  <div class="image-content-block_copyBlockMaxWidth__2GuM5">
+                    <h1 class="sb-heading mb4 md text-semibold" tabindex="-1" style="color:#ffffff">
+                      <span class="rich-text_text__1x78Z rich-text_width__208BM rich-text_greenLinks__37LuI">
+                        Add a burst of excitement to your day
+                      </span>
+                    </h1>
+                    <div class="sm rich-text_text__1x78Z rich-text_width__208BM rich-text_greenLinks__37LuI" 
+                        style="color:#ffffff">
+                      Become a Starbucks® Rewards member to collect Stars to earn free food, drinks &amp; more.
+                    </div>
+                    <a class="sb-button sb-button--default sb-button--white mt5" 
+                      style="min-width: 35px; min-height: 35px;" 
+                      href="…">Join now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </script>
+      </ex-code>
+
+      <ex-screen data-src="images/star.png" data-alt="" role="listitem"></ex-screen>
+
+      <ex-code data-code="18" role="listitem">
+        <script class="language-html" type="text/plain">
+          <figure class="promotion">
+              <img class="promotion__banner"
+                   src="…" srcset="…" 
+                   alt="A man holding a Starbucks drink 
+                        while fireworks burst around him." />
+              <figcaption class="promotion__abstract">
+                <h1 class="ptomotion__title">Add a burst of excitement to your day</h1>
+                <p  class="ptomotion__description">
+                   Become a Starbucks® Rewards member to collect 
+                   Stars to earn free food, drinks &amp; more.</p>
+                <a  class="ptomotion__details-link" href="…">Join now</a>
+              </figcaption>
+          </figure>
+        </script>
+      </ex-code>
+
+      <ex-slide data-split data-click>
+        <div class="half">
+          <div class="wrapper">
+            <h2>HTML Best Practice</h2>
+          </div>
+        </div>
+        <div class="half">
+          <img class="book-qrcode" src="images/html.svg" alt="QR-Code with link to the HTML Best Practice">
+          <a aria-label="Read HTML Best Practice" target="_blank" data-click href="https://css-challenges.com/">Read HTML Best Practice!</a>
+        </div>
+      </ex-slide>
+
+      <ex-slide data-split data-click>
+        <div class="half">
+          <div class="wrapper">
+            <h2>This Slides</h2>
+            <ul class="contacts">
+              <li>
+                Anton Nemtsev
+              </li>
+              <li>
+                Amazon
+              </li>
+              <li>
+                <a href="https://twitter.com/silentimp">@silentimp</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="half">
+          <img class="book-qrcode" src="images/slides.svg" alt="QR-Code with link to the HTML Best Practice">
+          <a aria-label="This slides" target="_blank" data-click href="https://silentimp.github.io/html">This slides</a>
+        </div>
+      </ex-slide>
+
+    </main>
+    <ex-progress></ex-progress>
+    <ex-countdown duration="20" relative></ex-countdown>
+    <script type="module" src="javascript/MessageController.mjs"></script>
+    <script type="module" src="javascript/components/index.mjs"></script>
+    <script type="module" src="javascript/SlideController.mjs"></script>
+    <script src="javascript/prism.js"></script>
+  </body>
+</html>

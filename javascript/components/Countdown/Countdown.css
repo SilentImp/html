@@ -1,0 +1,58 @@
+:host-context(.fullscreen) {
+  visibility: visible;
+}
+
+@supports not selector(:host-context(*)) {
+  :host(.fullscreen) {
+    visibility: visible;
+  }  
+}
+
+:host {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+:host([show-in-list]) {
+  visibility: visible;
+}
+
+meter {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+
+  width: 100vw;
+  border-radius: 0;
+  border: none;
+  height: .25rem;
+  z-index: 5;
+}
+
+meter::-moz-meter-bar {
+  border-radius: 0;
+  border: none;
+}
+
+meter::-webkit-meter-bar {
+  border-radius: 0;
+  border: none;
+}
+
+meter::-webkit-meter-inner-element {
+  display: block;
+}
+
+meter::-webkit-meter-optimum-value {
+  background: green;
+}
+
+meter::-webkit-meter-suboptimum-value {
+  background: orange;
+}
+
+meter::-webkit-meter-even-less-good-value {
+  background: red;
+}

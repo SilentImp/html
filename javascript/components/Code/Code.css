@@ -1,0 +1,7 @@
+:host {
+  --slide-bgc: #f5f2f0;
+}
+
+:host .exgibitionist-slide__content {
+  padding: 0;
+}
