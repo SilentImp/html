@@ -1,14 +1,11 @@
-import ExgibitonistSlide from '/html/javascript/components/Slide/Slide.mjs';
-
-const templateHTML = ({dataset} = {}) => {
-  // const line = dataset.line ? ` data-line="${dataset.line}"` : '';
-  // const language = dataset.language ? `class="language-${dataset.language}"` : '';
-  // const codeDataSet = [line];
-  return `<style>@import "/html/javascript/components/Code/Code.css";</style>
+import Slide from '../Slide/Slide.mjs';
+const CSS_URL = new URL('./Code.css', import.meta.url).href;
+const templateHTML = () => {
+  return `<style>@import "${CSS_URL}";</style>
   <slot></slot>`;
 };
 
-class ExgibitonistCode extends ExgibitonistSlide {
+class Code extends Slide {
   constructor() {
     super({
       slot: templateHTML
@@ -18,8 +15,14 @@ class ExgibitonistCode extends ExgibitonistSlide {
       this.style.fontSize = `${this.dataset.code}px`;
     }
   }
+
+  connectedCallback() {
+    super.connectedCallback();
+    const javascriptCodeNode = this.shadowRoot.querySelector('slot').assignedElements();
+    Prism.highlightElement(javascriptCodeNode[0]);
+  }
 }
       
-customElements.define('ex-code', ExgibitonistCode);
+customElements.define('ex-code', Code);
 
-export default ExgibitonistCode;
+export default Code;

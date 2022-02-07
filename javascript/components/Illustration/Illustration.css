@@ -2,11 +2,15 @@
   background-color: transparent;
 }
 
-.exgibitionist-slide__content {
+.slide__content {
   padding: 0;
 }
 
-img{
+.slide {
+  background: none;
+}
+
+img {
   width: var(--slide-width);
   aspect-ratio: var(--slide-ratio);
   object-fit: cover;

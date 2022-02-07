@@ -37,7 +37,7 @@ class SlideController {
     this.controlsKeys = [Keys.cmd, Keys.ctrl, Keys.alt, Keys.shift];
     this.selectKeys = [Keys.enter, Keys.space];
     this.exitFullscreenKeys = [Keys.esc];
-    this.enterFullscreenKeys = [Keys.enter, Keys.F];
+    this.enterFullscreenKeys = [Keys.F];
 
     // Set Key listeners
     document.addEventListener('touchstart', this.handleTouchStart, false);
@@ -76,7 +76,8 @@ class SlideController {
 
     // Give slides a number and tabindex
     this.slides.forEach((slide, index) => {
-      slide.setAttribute('data-number', index);
+      slide.dataset.number = index;
+      slide.style.setProperty('--slide-number', index);
     });
 
     // Get current slide from hash
@@ -237,7 +238,7 @@ class SlideController {
   // make sure slide number inside the existing range
   safeSlideNumber(index) {
     if (Number.isNaN(index) || (index < 0)) return 0;
-    if (index >= this.totalSlides) return this.totalSlides;
+    if (index >= this.totalSlides) return (this.totalSlides - 1);
     return index;
   }
 
@@ -270,7 +271,13 @@ class SlideController {
     if (
       slideNumber === this.currentSlide && 
       this.slides[this.currentSlide].classList.contains(ClassNames.currentSlide)
-    ) return;
+    ) {
+      SlideController.messenger.post("slidecontroller:fullscreenchange", {
+        detail: {
+          force: !StateURL.fullscreen
+        }
+      });
+    }
 
     // remove old classes
     this.getPrevSlide(this.currentSlide).classList.toggle(ClassNames.prevSlide, false);
@@ -305,8 +312,6 @@ class SlideController {
   }
 
   keyDownController (event) {
-    // const element = event.target;
-
     // Control keys
     if (this.controlsKeys.includes(event.which) && !this.controlsPressed.includes(event.which)) {
       this.controlsPressed.push(event.which);

@@ -1,3 +1,37 @@
+
+.demo-7[data-click] input,
+.demo-7[data-click] label {
+  pointer-events: all;
+}
+
+.demo-7 .zoom {
+  transform: scale(4);
+}
+
+.demo-7-styled input{
+  --s:20px;
+  height:var(--s);
+  width:auto;
+  aspect-ratio:2/1;
+  padding:calc(var(--s)/5);
+  border-radius:var(--s);
+  background:
+    radial-gradient(farthest-side,rgb(25, 118, 210) 85%,rgb(25, 118, 210) 100%, rgba(25, 118, 210, 0) ,rgba(25, 118, 210, 0)) left/var(--s) 100% no-repeat,
+    linear-gradient(90deg,rgba(25, 118, 210, .5) 50%,#939393 0) right/200% 100% content-box;
+  transition: background-position 0.25s;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  cursor:pointer;
+  vertical-align: middle;
+  position: relative;
+  top: -.1rem;
+}
+
+.demo-7-styled input:checked {
+  background-position:right,left;
+}
+
 .demo-1 {
   font-size: 3rem;
 }
@@ -11,8 +45,11 @@
 
 .demo-2 {
   font-size: 3rem;
-  background: url('/html/images/xtree.jpeg') no-repeat;
+  background: url('../images/xtree.jpeg') no-repeat;
   background-size: cover;
+  height: var(--slide-height);
+  width: var(--slide-width);
+  overflow: hidden;
 }
 
 .demo-2 button {
@@ -50,7 +87,7 @@
 .demo-2 dialog {
   border-radius: 1rem;
   border-style: none;
-  background: url(/html/images/xsnow.png) no-repeat;
+  background: url(../images/xsnow.png) no-repeat;
   background-size: cover;
   backdrop-filter: blur(1rem);
   box-shadow: inset 0 0 5rem 1rem #fff;
@@ -65,7 +102,7 @@
 }
 
 .demo-3 p{
-  font-size: 42px;
+  font-size: 38px;
   font-family: "Fira Code";
   line-height: 1.6;
   padding-left: 8rem;
@@ -145,89 +182,12 @@
   animation: unset;
 }
 
-.cloud {
-  --left: 100px;
-  --top: 0px;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem auto 0;
-  border-style: none;
-  background: #fff;
-  border-radius: 100%;
-  width: max-content;
-  aspect-ratio: 1;
-  padding: 2rem;
-  filter: drop-shadow(.1rem .1rem 0 #aaa4);
-  z-index: 5;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-transform: uppercase;
-  transform: translate(calc(-50% + var(--left)), calc(-50% + var(--top)));
-}
-
-.cloud::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  border-width: 1rem 1rem 0 0;
-  border-style: solid;
-  border-color: #fff transparent transparent;
-  transform: skewX(-10deg) translateX(-1rem) translateY(-.2rem);
-}
-
-.cloud.cloud--right::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  border-width: 1rem 0 0 1rem;
-  border-style: solid;
-  border-color: #fff transparent transparent;
-  transform: skewX(10deg) translateX(0rem) translateY(-.2rem);
-}
-
-.cloud.cloud-fish-0 {
-  --left: 100px;
-  --top: -50px;
-}
-
-.cloud-count {
-  --left: 110px;
-  --top: -160px;
-  font-size: 4rem;
-}
-
-.cloud.cloud-fish-2 {
-  --left: 230px;
-  --top: -60px;
-}
-
-.cloud.cloud-fish-3 {
-  --left: -300px;
-  --top: -97px;
-}
-
-.cloud.cloud-fish-4 {
-  --left: -300px;
-  --top: -80px;
-}
-
 .demo-5 .zoom{
   transform: scale(3);
   padding: 1rem;
   background-color: #cc06;
+  width: fit-content;
+  height: fit-content;
 }
 
 .demo-5.current .zoom {
@@ -237,95 +197,4 @@
 .demo-6[data-click] select{
   font-size: 3rem;
   pointer-events: all;
-}
-
-.demo-7[data-click] input,
-.demo-7[data-click] label {
-  pointer-events: all;
-}
-
-.demo-7 .zoom {
-  transform: scale(4);
-}
-
-.demo-7-styled input{
-  --s:20px;
-  height:var(--s);
-  width:auto;
-  aspect-ratio:2/1;
-  padding:calc(var(--s)/5);
-  border-radius:var(--s);
-  background:
-    radial-gradient(farthest-side,rgb(25, 118, 210) 85%,rgb(25, 118, 210) 100%, rgba(25, 118, 210, 0) ,rgba(25, 118, 210, 0)) left/var(--s) 100% no-repeat,
-    linear-gradient(90deg,rgba(25, 118, 210, .5) 50%,#939393 0) right/200% 100% content-box;
-  transition: background-position 0.25s;
-  -webkit-appearance:none;
-  -moz-appearance:none;
-  appearance:none;
-  cursor:pointer;
-  vertical-align: middle;
-  position: relative;
-  top: -.1rem;
-}
-
-.demo-7-styled input:checked {
-  background-position:right,left;
-}
-
-.half {
-  box-sizing: border-box;
-  flex: 0 0 50%;
-  padding: var(--slide-gap) calc(var(--slide-gap) / 2) var(--slide-gap) var(--slide-gap);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.half + .half {
-  padding: var(--slide-gap) var(--slide-gap) var(--slide-gap) calc(var(--slide-gap) / 2);
-}
-
-.half h1 {
-  display: inline;
-  font-size: 100px;
-  font-weight: 200;
-  line-height: 1.2;
-  color: inherit;
-  background-color: #ff0;
-  filter: drop-shadow(16px 0 0 #ff0) drop-shadow(-16px 0 0 #ff0);
-  flex-grow: 0;
-}
-
-.half h2 {
-  display: inline;
-  font-size: 80px;
-  font-weight: 200;
-  line-height: 1.2;
-  color: inherit;
-  background-color: #ff0;
-  filter: drop-shadow(16px 0 0 #ff0) drop-shadow(-16px 0 0 #ff0);
-  flex-grow: 0;
-}
-
-.half > img {
-  max-width: 80%;
-}
-
-.half .wrapper {
-  width: min-content;
-}
-
-.half .logotype {
-  margin-bottom: 1rem;
-}
-
-[data-click] {
-  pointer-events: all;
-  z-index: 1;
-}
-
-.contacts {
-  padding: 1rem 0;
-  font-size: 1.6rem;
 }

@@ -1,11 +1,11 @@
-import ExgibitonistSlide from '/html/javascript/components/Slide/Slide.mjs';
-
+import Slide from '../Slide/Slide.mjs';
+const CSS_URL = new URL('./Screenshot.css', import.meta.url).href;
 const templateHTML = ({dataset} = {}) => {
-  return `<style>@import "/html/javascript/components/Screenshot/Screenshot.css";</style>
+  return `<style>@import "${CSS_URL}";</style>
 <img src="${dataset.src}" alt="${dataset.alt}" />`;
 };
 
-class ExgibitonistScreenshot extends ExgibitonistSlide {
+class Screenshot extends Slide {
   constructor() {
     super({
       slot: templateHTML
@@ -13,6 +13,6 @@ class ExgibitonistScreenshot extends ExgibitonistSlide {
   }
 }
 
-customElements.define('ex-screen', ExgibitonistScreenshot);
+customElements.define('ex-screen', Screenshot);
 
-export default ExgibitonistScreenshot;
+export default Screenshot;

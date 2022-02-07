@@ -1,8 +1,8 @@
 import { ClassNames } from "../../Selectors.mjs";
-import StateURL from "/html/javascript/StateURL.mjs";
-
+import StateURL from "../../StateURL.mjs";
+const CSS_URL = new URL('./Countdown.css', import.meta.url).href;
 const templateHTML = `
-  <style>@import "/html/javascript/components/Countdown/Countdown.css";</style>
+  <style>@import "${CSS_URL}";</style>
   <meter
     min="0"
     max="100"

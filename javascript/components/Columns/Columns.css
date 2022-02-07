@@ -1,0 +1,18 @@
+:host .slide__delimiter {
+  display: grid;
+  gap: var(--slide-gap);
+  width: var(--slide-width);
+  height: var(--slide-height);
+}
+
+:host([data-columns="2"]) .slide__delimiter {
+  grid-template-columns: repeat(2, calc((var(--slide-width) - var(--slide-gap)) / 2));
+}
+
+:host([data-columns="3"]) .slide__delimiter {
+  grid-template-columns: repeat(3, calc((var(--slide-width) - (var(--slide-gap) * 2)) / 3));
+}
+
+:host([data-columns="4"]) .slide__delimiter {
+  grid-template-columns: repeat(4, calc((var(--slide-width) - (var(--slide-gap) * 3)) / 4));
+}

@@ -1,0 +1,52 @@
+:host(.fullscreen) [data-click] {
+  pointer-events: all;
+}
+
+:host-context(.fullscreen) [data-click] {
+  pointer-events: all;
+}
+
+.half {
+  box-sizing: border-box;
+  flex: 0 0 50%;
+  padding: var(--slide-gap) calc(var(--slide-gap) / 2) var(--slide-gap) var(--slide-gap);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.half + .half {
+  padding: var(--slide-gap) var(--slide-gap) var(--slide-gap) calc(var(--slide-gap) / 2);
+}
+
+.slide__delimiter {
+  display: flex;
+}
+
+h1 {
+  display: inline;
+  font-size: 100px;
+  font-weight: 200;
+  line-height: 1.2;
+  color: inherit;
+  background-color: #ff0;
+  filter: drop-shadow(16px 0 0 #ff0) drop-shadow(-16px 0 0 #ff0);
+  flex-grow: 0;
+}
+
+h2 {
+  display: inline;
+  font-size: 80px;
+  font-weight: 200;
+  line-height: 1.2;
+  color: inherit;
+  background-color: #ff0;
+  filter: drop-shadow(16px 0 0 #ff0) drop-shadow(-16px 0 0 #ff0);
+  flex-grow: 0;
+}
+
+.qrcode {
+  max-width: 80%;
+  display: block;
+}

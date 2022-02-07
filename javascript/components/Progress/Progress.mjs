@@ -1,6 +1,7 @@
 import { ClassNames } from "../../Selectors.mjs";
+const CSS_URL = new URL('./Progress.css', import.meta.url).href;
 const templateHTML = `
-<style>@import "/html/javascript/components/Progress/Progress.css";</style>
+<style>@import "${CSS_URL}";</style>
 <progress></progress>
 `;
 

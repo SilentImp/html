@@ -2,8 +2,8 @@
   background-color: transparent;
 }
 
-.exgibitionist-slide__content {
-  padding: 0;
+.slide {
+  background: none;
 }
 
 img{

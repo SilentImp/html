@@ -1,12 +1,12 @@
-import ExgibitonistSlide from '/html/javascript/components/Slide/Slide.mjs';
-
+import Slide from '../Slide/Slide.mjs';
+const CSS_URL = new URL('./Title.css', import.meta.url).href;
 const templateHTML = ({dataset} = {}) => {
   const level = Math.min(Math.max(parseInt(dataset?.level || '1'), 1), 6);
-  return `<style>@import "/html/javascript/components/Title/Title.css";</style>
+  return `<style>@import "${CSS_URL}";</style>
 <h${level}><slot></slot></h${level}>`;
 };
 
-class ExgibitonistTitle extends ExgibitonistSlide {
+class Title extends Slide {
   constructor() {
     super({
       slot: templateHTML
@@ -14,6 +14,6 @@ class ExgibitonistTitle extends ExgibitonistSlide {
   }
 }
       
-customElements.define('ex-title', ExgibitonistTitle);
+customElements.define('ex-title', Title);
 
-export default ExgibitonistTitle;
+export default Title;

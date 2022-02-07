@@ -1,0 +1,41 @@
+.cloud {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border-style: none;
+  background: #fff;
+  border-radius: 100%;
+  width: max-content;
+  aspect-ratio: 1;
+  padding: 2rem;
+  filter: drop-shadow(.1rem .1rem 0 #aaa4);
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-transform: uppercase;
+  transform: translate(calc(-50% + var(--left, 0px)), calc(-50% + var(--top, 0px)));
+}
+
+.cloud::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  border-width: 1rem 1rem 0 0;
+  border-style: solid;
+  border-color: #fff transparent transparent;
+  transform: skewX(-10deg) translateX(-1rem) translateY(-.2rem);
+}
+
+:host([data-reverse]) .cloud::before {
+  border-width: 1rem 0 0 1rem;
+  border-color: #fff transparent transparent;
+  transform: skewX(10deg) translateX(0rem) translateY(-.2rem);
+}

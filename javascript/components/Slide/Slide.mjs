@@ -1,20 +1,22 @@
+const CSS_URL = new URL('./Slide.css', import.meta.url).href;
 const templateHTML = ({
   slot = '<slot></slot>',
   caption,
-}) => `
-<style>@import "/html/javascript/components/Slide/Slide.css";</style>
-<figure class="exgibitionist-slide__content">
-  ${slot}
-  ${(caption !== null && caption !== undefined) ? `<figcaption>${caption}</figcaption>` : ''}
-</figure>
-<button 
-  class="exgibitionist-slide__select-slide" 
-  type="button">Select slide</button>
-`;
+}) => `<style>@import "${CSS_URL}";</style>
+<button class="slide__select" type="button">Select slide</button>
+<article class="slide">
+  <figure class="slide__content">
+    <div class="slide__delimiter">
+      ${slot}
+    </div>
+    ${(caption !== null && caption !== undefined) ? `<figcaption class="slide__caption>${caption}</figcaption>` : ''}
+  </figure>
+</article>`;
 
-class ExgibitonistSlide extends HTMLElement {
+class Slide extends HTMLElement {
   constructor(variables = {}) {
     super();
+
     this.attachShadow({mode: 'open'});
 
     const executedVariables = Object
@@ -61,10 +63,12 @@ class ExgibitonistSlide extends HTMLElement {
   }
 
   connectedCallback () {
-    this.button = this.shadowRoot.querySelector('.exgibitionist-slide__select-slide');
+    this.button = this.shadowRoot.querySelector('.slide__select');
     this.button.addEventListener('click', this.selectSlide);
+
     if (this.dataset.number) {
-      this.button.appendChild(document.createTextNode(` № ${this.dataset.number}`));
+      const slideNumberText = document.createTextNode(` № ${this.dataset.number}`);
+      this.button.appendChild(slideNumberText);
     }
 
     window[Symbol.for("SlideMessanger")].register('slidecontroller:change', this.checkFocus);
@@ -72,6 +76,6 @@ class ExgibitonistSlide extends HTMLElement {
 
 }
       
-customElements.define('ex-slide', ExgibitonistSlide);
+customElements.define('ex-slide', Slide);
 
-export default ExgibitonistSlide;
+export default Slide;

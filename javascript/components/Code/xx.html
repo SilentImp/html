@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Presentation description">
-    <link rel="stylesheet" href="styles/SlideController.css">
-    <title>Presentation</title>
-  </head>
-  <body>
-    <main role="list">
-
-      <ex-title data-narrow role="listitem" >HTML Best Practice</ex-title>
+      <ex-title role="listitem" >HTML Best Practice</ex-title>
       
       <ex-illustration data-src="images/3whales-t.png" data-alt="" role="listitem"></ex-illustration>
       
@@ -23,10 +10,9 @@
 
       <ex-illustration data-contain="" data-src="images/tools.jpeg" data-alt="" role="listitem"></ex-illustration>
 
-      <ex-title data-narrow data-level="2" role="listitem" >Prefer fewer elements over more elements</ex-title>
+      <ex-title data-level="2" role="listitem" >Prefer fewer elements over more elements</ex-title>
 
       <ex-screen data-src="images/mui-toggle-angular.png" data-alt="" role="listitem"></ex-screen>
-
 
       <ex-code data-code="16" role="listitem">
         <script class="language-html" type="text/plain">
@@ -79,7 +65,7 @@
       </ex-code>
 
       <ex-illustration data-src="images/bored.png" data-alt="" role="listitem">
-        <ex-cloud data-reverse data-left="120px" data-top="-120px">14!</ex-cloud>
+        <h2 class="cloud-count cloud cloud--right">14!</h2>
       </ex-illustration>
 
       <ex-screen data-src="images/mui-toggle-react.png" data-alt="" role="listitem"></ex-screen>
@@ -106,7 +92,6 @@
         </script>
       </ex-code>
 
-
       <ex-code data-code="16" role="listitem">
         <script class="language-html" data-line="5-6" type="text/plain">
           <label class="MuiFormControlLabel-root 
@@ -130,7 +115,7 @@
       </ex-code>
 
       <ex-illustration data-src="images/bored.png" data-alt="" role="listitem">
-        <ex-cloud data-reverse data-left="120px" data-top="-120px">8!</ex-cloud>
+        <h2 class="cloud-count cloud cloud--right">8!</h2>
       </ex-illustration>
 
       <ex-code data-code="42" role="listitem">
@@ -143,11 +128,11 @@
       </ex-code>
 
       <ex-illustration data-src="images/bored.png" data-alt="" role="listitem">
-        <ex-cloud data-reverse data-left="120px" data-top="-120px">2!</ex-cloud>
+        <h2 class="cloud-count cloud cloud--right">2!</h2>
       </ex-illustration>
 
 
-      <ex-slide data-wide data-center data-click class="demo-7">
+      <ex-slide data-click class="demo-7">
         <form class="zoom">
           <label>
             <input type="checkbox" />
@@ -156,7 +141,7 @@
         </form>
       </ex-slide>
 
-      <ex-slide data-wide data-center data-click class="demo-7 demo-7-styled">
+      <ex-slide data-click class="demo-7 demo-7-styled">
         <form class="zoom">
           <label>
             <input type="checkbox" />
@@ -165,20 +150,32 @@
         </form>
       </ex-slide>
 
-      <ex-qrcode 
-        data-qrcode="htmlhell.svg" 
-        data-link="https://www.htmhell.dev/" 
-        data-label="Check HTML hell out!">
-        HTML Hell</ex-qrcode>
+      <ex-slide data-split data-click>
+        <div class="half">
+          <div class="wrapper">
+            <img class="logotype" height="200" src="images/htmlhell-logotype.svg" alt=""/>
+            <h1>HTML Hell</h1>
+          </div>
+        </div>
+        <div class="half">
+          <img class="book-qrcode" src="images/htmlhell.svg" alt="QR-Code with link to the HTML Hell">
+          <a aria-label="Open portal to HTML Hell" target="_blank" data-click href="https://www.htmhell.dev/">Check HTML hell out!</a>
+        </div>
+      </ex-slide>
 
-      <ex-qrcode 
-        data-level="2"
-        data-qrcode="csschallenge.svg" 
-        data-link="https://css-challenges.com/" 
-        data-label="Take CSS Challenge!">
-        CSS Challenges</ex-qrcode>
+      <ex-slide data-split data-click>
+        <div class="half">
+          <div class="wrapper">
+            <h2>CSS Challenges</h2>
+          </div>
+        </div>
+        <div class="half">
+          <img class="book-qrcode" src="images/csschallenge.svg" alt="QR-Code with link to the CSS Challenge">
+          <a aria-label="Take CSS Challenges!" target="_blank" data-click href="https://css-challenges.com/">Take CSS Challenges!</a>
+        </div>
+      </ex-slide>
 
-      <ex-title data-narrow data-level="2" role="listitem" >Prefer semantic elements over non-semantic</ex-title>
+      <ex-title data-level="2" role="listitem" >Prefer semantic elements over non-semantic</ex-title>
 
       <ex-illustration data-src="images/elements.png" data-alt="" role="listitem"></ex-illustration>
 
@@ -275,16 +272,19 @@
         </script>
       </ex-code>
 
+      <ex-slide data-split data-click>
+        <div class="half">
+          <div class="wrapper">
+            <h1>Web Almanac</h1>
+          </div>
+        </div>
+        <div class="half">
+          <img class="book-qrcode" src="images/almanac.svg" alt="QR-Code with link to the Web Almanac">
+          <a aria-label="Open Web Almanac" target="_blank" data-click href="https://almanac.httparchive.org/en/2021/markup">Read the Web Almanac!</a>
+        </div>
+      </ex-slide>
 
-      <ex-qrcode 
-        data-level="2"
-        data-qrcode="almanac.svg" 
-        data-link="https://almanac.httparchive.org/en/2021/markup" 
-        data-label="Open Web Almanac">
-        Read Web Almanac!</ex-qrcode>
-
-
-      <ex-title data-narrow data-level="2" role="listitem" >Prefer progressive enhancement and simplification over hacky or complex solutions</ex-title>
+      <ex-title data-level="2" role="listitem" >Prefer progressive enhancement and simplification over hacky or complex solutions</ex-title>
 
       <ex-screen data-src="images/sticky.png" data-alt="" role="listitem"></ex-screen>
 
@@ -300,7 +300,7 @@
 
       <ex-screen data-src="images/sticky-support.png" data-alt="" role="listitem"></ex-screen>
 
-      <ex-title data-narrow data-level="2" role="listitem" >Prefer native over custom</ex-title>
+      <ex-title data-level="2" role="listitem" >Prefer native over custom</ex-title>
 
       <ex-screen data-src="images/modal.png" data-alt="" role="listitem"></ex-screen>
       <ex-screen data-src="images/react-modal-inside.png" data-alt="" role="listitem"></ex-screen>
@@ -390,43 +390,47 @@
         </script>
       </ex-code>
 
-      <ex-slide data-click data-wide>
-        <div class="demo-2">
-          <dialog id="dialog-2">
-            <form method="dialog">
-              <p>Merry Christmas!</p>
-              <button>Ok</button>
-            </form>
-          </dialog>
-          <button id="button-2">
-            Open modal!
-          </button>
-          <script>
-            const button2 = document.getElementById('button-2');
-            const dialog2 = document.getElementById('dialog-2');
-            button2.addEventListener('click', ()=>dialog2.showModal());
-          </script>
+      <ex-slide data-click class="demo-2">
+        <dialog id="dialog-2">
+          <form method="dialog">
+            <p>Merry Christmas!</p>
+            <button>Ok</button>
+          </form>
+        </dialog>
+        <button id="button-2">
+          Open modal!
+        </button>
+        <script>
+          const button2 = document.getElementById('button-2');
+          const dialog2 = document.getElementById('dialog-2');
+          button2.addEventListener('click', ()=>dialog2.showModal());
+        </script>
+      </ex-slide>
+
+      <ex-slide data-split data-click>
+        <div class="half">
+          <h1>Dialog</h1>
+        </div>
+        <div class="half">
+          <img class="book-qrcode" src="images/dialog.svg" alt="QR-Code with link to the spec">
+          <a aria-label="Read about dialog element in the HTML spec" target="_blank" data-click href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element">Read about dialog element in the HTML spec</a>
         </div>
       </ex-slide>
 
-      <ex-qrcode 
-        data-level="1"
-        data-qrcode="dialog.svg" 
-        data-link="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element" 
-        data-label="Read about dialog element in the HTML spec">
-        Dialog</ex-qrcode>
+      <ex-slide data-split data-click>
+        <div class="half">
+          <h1>Open UI</h1>
+        </div>
+        <div class="half">
+          <img class="book-qrcode" src="images/openui.svg" alt="QR-Code with link to the Open UI">
+          <a aria-label="Read about Open UI" target="_blank" data-click href="https://open-ui.org/">Read about Open UI</a>
+        </div>
+      </ex-slide>
 
-      <ex-qrcode 
-        data-level="1"
-        data-qrcode="openui.svg" 
-        data-link="https://open-ui.org/" 
-        data-label="Read about Open UI">
-        Open UI</ex-qrcode>
-
-      <ex-title data-narrow data-level="2" role="listitem" >Prefer valid over invalid</ex-title>
+      <ex-title data-level="2" role="listitem" >Prefer valid over invalid</ex-title>
 
       <ex-illustration data-src="images/fish.jpeg" data-alt="" role="listitem">
-        <ex-cloud data-left="100px" data-top="-50px">Why?<br>Browsers<br>are smart!</ex-cloud>
+        <h2 class="cloud-fish-0 cloud">Why?<br>Browsers<br>are smart!</h2>
       </ex-illustration>
 
       <ex-code data-code="42" role="listitem">
@@ -440,16 +444,16 @@
       </ex-code>
 
       <ex-slide class="demo-3">
-        <p>The odyssey of a devoted<br>
-          palm-wine <del>drinker through<br>
+        <p>The odyssey of a devoted
+          palm-wine <del>drinker through
           nightmare of adventure.</del></p>
         <p><del>Dead Palm-Wine</del> Tapster<br>
           in the Deads Town</p>
       </ex-slide>
 
       <ex-slide class="demo-3">
-        <p>The odyssey of a devoted<br>
-          palm-wine <del>drinker through<br>
+        <p>The odyssey of a devoted
+          palm-wine <del>drinker through
           nightmare of adventure.</p>
         <p><ins>Dead Palm-Wine</ins> Tapster<br>
           in the Deads Town</p>
@@ -460,8 +464,8 @@
           <p>The odyssey of a devoted
              palm-wine <del>drinker through
              nightmare of adventure.</del></p>
-          <p><del>Dead Palm-Wine</del> Tapster  
-             in the Deads Town</p>
+          <p><del>Dead Palm-Wine</del>
+             Tapster in the Deads Town</p>
         </script>
       </ex-code>
 
@@ -474,7 +478,7 @@
       </ex-slide>
 
       <ex-illustration data-src="images/fish.jpeg" data-alt="" role="listitem">
-        <ex-cloud data-left="100px" data-top="0px">It's<br>easy!</ex-cloud>
+        <h2 class="cloud">It's<br>easy!</h2>
       </ex-illustration>
 
       <ex-code data-code="24" role="listitem">
@@ -536,7 +540,7 @@
       </ex-slide>
 
       <ex-illustration data-src="images/fish.jpeg" data-alt="" role="listitem">
-        <ex-cloud data-reverse data-left="230px" data-top="-60px">I knew<br>it!</ex-cloud>
+        <h2 class="cloud-fish-2 cloud cloud--right">I knew<br>it!</h2>
       </ex-illustration>
 
       <ex-code data-code="22" role="listitem">
@@ -558,7 +562,7 @@
         </script>
       </ex-code>
 
-      <ex-slide data-wide data-center class="demo-5">
+      <ex-slide class="demo-5">
         <div class="zoom">
         <select name="order">
           <option>
@@ -608,16 +612,16 @@
       </ex-slide>
 
       <ex-illustration data-src="images/fish-2.jpeg" data-alt="" role="listitem">
-        <ex-cloud data-reverse data-left="-300px" data-top="-97px">Please,<br>consider<br>reading<br>the spec!</ex-cloud>
+        <h2 class="cloud-fish-3 cloud cloud--right">Please,<br>consider<br>reading<br>the spec!</h2>
       </ex-illustration>
 
       <ex-illustration data-src="images/fish-2.jpeg" data-alt="" role="listitem">
-        <ex-cloud data-reverse data-left="-300px" data-top="-80px">Please!</ex-cloud>
+        <h2 class="cloud-fish-4 cloud cloud--right">Please!</h2>
       </ex-illustration>
 
       <ex-screen data-src="images/options-spec.png" data-alt="" role="listitem"></ex-screen>
 
-      <ex-title data-narrow data-level="2" role="listitem" >Prefer presentation separated from the structure</ex-title>
+      <ex-title data-level="2" role="listitem" >Prefer presentation separated from the structure</ex-title>
 
       <ex-illustration data-src="images/3whales-t.png" data-alt="" role="listitem"></ex-illustration>
 
@@ -674,31 +678,37 @@
         </script>
       </ex-code>
 
+      <ex-slide data-split data-click>
+        <div class="half">
+          <div class="wrapper">
+            <h2>HTML Best Practice</h2>
+          </div>
+        </div>
+        <div class="half">
+          <img class="book-qrcode" src="images/html.svg" alt="QR-Code with link to the HTML Best Practice">
+          <a aria-label="Read HTML Best Practice" target="_blank" data-click href="https://css-challenges.com/">Read HTML Best Practice!</a>
+        </div>
+      </ex-slide>
 
-      <ex-qrcode 
-        data-level="2"
-        data-qrcode="html.svg" 
-        data-link="https://silentimp.github.io/html/" 
-        data-label="Read about HTML Best Practice">
-        HTML Best Practice</ex-qrcode>
-
-
-    </main>
-    <ex-progress></ex-progress>
-    <ex-countdown duration="20" relative></ex-countdown>
-    <script type="module" src="javascript/MessageController.mjs"></script>
-    <script type="module" src="javascript/components/Slide/Slide.mjs"></script>
-    <script type="module" src="javascript/components/Cloud/Cloud.mjs"></script>
-    <script type="module" src="javascript/components/Columns/Columns.mjs"></script>
-    <script type="module" src="javascript/components/Code/Code.mjs"></script>
-    <script type="module" src="javascript/components/QRCode/QRCode.mjs"></script>
-    <script type="module" src="javascript/components/Countdown/Countdown.mjs"></script>
-    <script type="module" src="javascript/components/Illustration/Illustration.mjs"></script>
-    <script type="module" src="javascript/components/Progress/Progress.mjs"></script>
-    <script type="module" src="javascript/components/Screenshot/Screenshot.mjs"></script>
-    <script type="module" src="javascript/components/Title/Title.mjs"></script>
-    <script type="module" src="javascript/components/SlideSSR/SlideSSR.mjs"></script>
-    <script type="module" src="javascript/SlideController.mjs"></script>
-    <script src="javascript/prism.js" data-manual></script>
-  </body>
-</html>
+      <ex-slide data-split data-click>
+        <div class="half">
+          <div class="wrapper">
+            <h2>This Slides</h2>
+            <ul class="contacts">
+              <li>
+                Anton Nemtsev
+              </li>
+              <li>
+                Amazon
+              </li>
+              <li>
+                <a href="https://twitter.com/silentimp">@silentimp</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="half">
+          <img class="book-qrcode" src="images/slides.svg" alt="QR-Code with link to the HTML Best Practice">
+          <a aria-label="This slides" target="_blank" data-click href="https://silentimp.github.io/html">This slides</a>
+        </div>
+      </ex-slide>

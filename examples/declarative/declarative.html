@@ -1,0 +1,18 @@
+
+      <ex-slide-ssr role="listitem">
+        <template shadowroot="open">
+          <style>@import "javascript/components/SlideSSR/SlideSSR.css";</style>
+          <article class="slide">
+            <figure class="slide__content">
+              <div class="slide__delimiter">
+                <slot></slot>
+              </div>
+              <figcaption class="slide__caption"><slot name="caption"></slot></figcaption>
+            </figure>
+          </article>
+          <button class="slide__select" type="button">Select slide</button>
+        </template>
+        This is text of the slide
+      </ex-slide-ssr>
+
+      <ex-slide role="listitem">This is text of the slide</ex-slide>

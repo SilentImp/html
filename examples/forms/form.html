@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form handling example</title>
+</head>
+<body>
+  <style>
+    custom-input:invalid {
+      background-color: #cc000066;
+    }
+
+    custom-input:valid {
+      background-color: #00dd0066;
+    }
+  </style>
+  <form action="" method="get">
+    <fieldset>
+      <label>Телефон: <input required type="tel" name="normal"></label>
+    </fieldset>
+    <fieldset>
+      <legend>Характеристики ткани</legend>
+      <custom-input required name="custom">Цвет</custom-input>
+    </fieldset>
+    <button type="submit">Send</button>
+  </form>
+
+  <script>
+    const templateHTML = (name, value = '', isRequired = false) => `<style>
+    
+    
+      </style>
+      <label for="color"><slot></slot></label>
+      <input id="color" ${isRequired ? 'required' : '' } name="${name}" value="${value}" type="color"/>
+    `;
+
+    class CustomInput extends HTMLElement {
+      static formAssociated = true;
+      static observedAttributes = ['value', 'required'];
+
+      constructor() {
+        super();
+        this.internals = this.attachInternals();
+
+        console.log('internals');
+        console.log(this.internals);
+
+        this.attachShadow({mode: 'open'});
+        const template = document.createElement('TEMPLATE');
+        const name = this.getAttribute('name');
+        const value = this.getAttribute('value');
+        template.innerHTML = templateHTML(name, value);
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        
+        this.colorInput = this.shadowRoot.querySelector('input');
+        if (this.hasAttribute('value')) this.internals.setFormValue(this.getAttribute.value);
+        
+        this.changeHandler = this.changeHandler.bind(this);
+        this.validityCheck = this.validityCheck.bind(this);
+      }
+
+      attributeChangedCallback(name, oldValue, newValue) {
+        console.log(name, oldValue, newValue);
+        if (name === 'value') this.internals.setFormValue(newValue);
+        if (name === 'required') this.internals.ariaRequired = this.hasAttribute('required');
+
+        this.validityCheck();
+      }
+
+      validityCheck() {
+        console.log('validity: ', this.colorInput.validity, this.colorInput.validityCheck )
+        if (this.colorInput.value === '#000000' && this.hasAttribute('required')) {
+          this.internals.setValidity({
+            valueMissing: true
+          }, 'This field is required', this.colorInput);
+        } else {
+          this.internals.setValidity({});
+        }
+      }
+
+      changeHandler (event) {
+        this.setAttribute('value', this.colorInput.value);
+      }
+
+      connectedCallback () {
+        this.colorInput.addEventListener('change', this.changeHandler);
+      }
+    }
+          
+    customElements.define('custom-input', CustomInput);
+  </script>
+  <script>
+    const submitHandler = (event) => {
+      console.log('submitHandler');
+      console.log(event);
+
+      event.preventDefault();
+      const form = event.currentTarget;
+      const data = new FormData(form);
+      console.log(Object.fromEntries(data));
+    };
+
+    const formdataHandler = (event) => {
+      console.log('formdataHandler');
+      console.log(event);
+      console.log(Object.fromEntries(event.formData));
+    };
+
+    const form = document.querySelector('form');
+    form.addEventListener('submit', submitHandler);
+    form.addEventListener('formdata', formdataHandler);
+  </script>
+</body>
+</html>

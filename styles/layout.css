@@ -27,6 +27,11 @@ main {
   align-items: start;
 }
 
+:not(:defined) > *,
+:not(:defined) {
+  display: none;
+}
+
 @media print {
   body {
     background: var(--light-color);

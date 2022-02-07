@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form handling example</title>
+</head>
+<body>
+  <style>
+    custom-input:invalid {
+      background-color: #cc000066;
+    }
+
+    custom-input:valid {
+      background-color: #00dd0066;
+    }
+  </style>
+  <form action="" method="get">
+    <custom-input id="color" required name="some-room"></custom-input>
+    <button type="submit">Send</button>
+    <button type="reset">Reset</button>
+  </form>
+
+  <script>
+    const templateHTML = `<style>
+        :host {
+          display:block;
+        }
+
+        label,
+        ::slotted(label) {
+          display: block;  
+        }
+
+      </style>
+      <fieldset>
+        <label>
+          <input type="radio" name="room" value="kitchen" />
+          Кухню
+        </label>
+        <label>
+          <input type="radio" name="room" value="toilet" />
+          Туалет
+        </label>
+        <label>
+          <input type="radio" name="room" value="rose-garden" />
+          Розарий
+        </label>
+        <label>
+          <input type="radio" name="room" value="other" />
+          Другую комнату
+        </label>
+        <input type="text" name="other-room" value="" hidden required/>
+      </fieldset>
+    `;
+
+    class CustomInput extends HTMLElement {
+      static formAssociated = true;
+      static observedAttributes = ['value', 'required'];
+
+      constructor() {
+        super();
+        this.internals = this.attachInternals();
+
+        console.log('internals');
+        console.log(this.internals);
+
+        this.attachShadow({mode: 'open'});
+        const template = document.createElement('TEMPLATE');
+
+        template.innerHTML = templateHTML;
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        this.otherInput = this.shadowRoot.querySelector('input[type="text"]');
+        this.fieldset = this.shadowRoot.querySelector('fieldset');
+        if (!this.hasAttribute('tabindex')) {
+          this.setAttribute('tabindex', '1');
+        }
+
+        this.changeHandler = this.changeHandler.bind(this);
+        this.validityCheck = this.validityCheck.bind(this);
+
+        // this.internals.setFormValue(this.getAttribute.value);
+      }
+
+      attributeChangedCallback(name, oldValue, newValue) {
+        console.log(name, oldValue, newValue);
+
+        if (name === 'required') this.internals.ariaRequired = this.hasAttribute('required');
+      }
+
+      formDisabledCallback(disabled) {
+        console.log('disabled', disabled);
+        this.fieldset.toggleAttribute("disabled", disabled);
+      }
+
+      formResetCallback() {
+        console.log('reset');
+        const selectedRadio = this.shadowRoot.querySelector('input:checked');
+        if (selectedRadio !== null) {
+          selectedRadio.checked = false;
+          this.otherInput.toggleAttribute("hidden", true);
+          this.otherInput.value = "";
+        }
+        this.internals.setFormValue(null);
+        this.validityCheck();
+      }
+
+      isInputVisible (input) {
+        console.log('is input visible');
+        const radio = input || this.shadowRoot.querySelector('input:checked');
+        const isHidden = (radio === null || radio.value !== "other");
+        this.otherInput.toggleAttribute("hidden", isHidden);
+        if (isHidden) {
+          this.otherInput.value = "";
+        } else {
+          this.otherInput.focus();
+        }
+      }
+
+      changeHandler (event) {
+        console.log('changeHandler');
+        const radio = this.shadowRoot.querySelector('input:checked');
+        const radioValue = radio.value;
+        const data = new FormData();
+        data.append('room', radioValue);
+        if (radioValue === 'other') {
+          data.append('other', this.otherInput.value);
+        }
+        this.internals.setFormValue(data);
+        this.isInputVisible(radio);
+        this.validityCheck();
+      }
+
+      validityCheck () {
+        console.log('validityCheck');
+
+        const radio = this.shadowRoot.querySelector('input:checked');
+        const hasCheckedRadio = radio !== null;
+        const isOther = radio?.value === 'other';
+        const isEmpty = this.otherInput.value.trim().length === 0;
+
+        console.log('hasCheckedRadio: ', hasCheckedRadio);
+
+        if (
+          this.hasAttribute('required') && (
+            !hasCheckedRadio || 
+            (hasCheckedRadio && isOther && isEmpty)
+          )
+        ) {
+          console.log('invalid');
+          const focusable = isOther ? this.otherInput : undefined;
+          console.log('focusable: ', focusable);
+          this.internals.setValidity({
+            valueMissing: true
+          }, 'This field is required', focusable);
+        } else {
+          console.log('valid');
+          this.internals.setValidity({});
+        }
+      }
+
+      connectedCallback () {
+        console.log('connectedCallback');
+        this.shadowRoot.querySelector('fieldset').addEventListener('change', this.changeHandler);
+        this.isInputVisible();
+        this.internals.setValidity({});
+        this.validityCheck();
+      }
+    }
+          
+    customElements.define('custom-input', CustomInput);
+  </script>
+  <script>
+    const submitHandler = (event) => {
+      console.log('submitHandler');
+      console.log(event);
+
+      event.preventDefault();
+      const form = event.currentTarget;
+      const data = new FormData(form);
+      console.log(Object.fromEntries(data));
+    };
+
+    const formdataHandler = (event) => {
+      console.log('formdataHandler');
+      console.log(event);
+      console.log(Object.fromEntries(event.formData));
+    };
+
+    const form = document.querySelector('form');
+    form.addEventListener('submit', submitHandler);
+    form.addEventListener('formdata', formdataHandler);
+  </script>
+</body>
+</html>
