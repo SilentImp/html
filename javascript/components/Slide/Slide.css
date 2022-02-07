@@ -91,6 +91,10 @@
   padding: 0;
 }
 
+:host([data-content]) .slide__delimiter {
+  padding: 0 4rem;
+}
+
 :host([data-wide]) .slide__delimiter {
   width: var(--slide-width);
   height: var(--slide-height);

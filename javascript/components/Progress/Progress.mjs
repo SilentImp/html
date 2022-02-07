@@ -24,7 +24,7 @@ class ExgibitonistProgress extends HTMLElement {
     this.fullScreenChange = this.fullScreenChange.bind(this);
 
     if (!this.supportHostContext) {
-      window[Symbol.for("SlideMessanger")].register('slidecontroller:fullscreenchange', this.fullScreenChange);
+      // window[Symbol.for("SlideMessanger")].register('slidecontroller:fullscreenchange', this.fullScreenChange);
     }
   }
 
@@ -52,8 +52,8 @@ class ExgibitonistProgress extends HTMLElement {
   connectedCallback () {
     this.progressBar = this.shadowRoot.querySelector('progress');
     this.updateProgress();
-    window[Symbol.for("SlideMessanger")].register('slidecontroller:total', this.setTotal);
-    window[Symbol.for("SlideMessanger")].register('slidecontroller:select', this.selectSlide);
+    // window[Symbol.for("SlideMessanger")].register('slidecontroller:total', this.setTotal);
+    // window[Symbol.for("SlideMessanger")].register('slidecontroller:select', this.selectSlide);
   }
 }
 

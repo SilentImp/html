@@ -51,6 +51,8 @@ class StateURL {
   }
 
   static get fullscreen() {
+    // debugger;
+    console.log(new URL(window.location.href).href)
     return StateURL.isInSearch(Options.fullscreenQueryName);
   }
 

@@ -46,6 +46,28 @@ h2 {
   flex-grow: 0;
 }
 
+h3 {
+  display: inline;
+  font-size: 60px;
+  font-weight: 200;
+  line-height: 1.2;
+  color: inherit;
+  background-color: #ff0;
+  filter: drop-shadow(16px 0 0 #ff0) drop-shadow(-16px 0 0 #ff0);
+  flex-grow: 0;
+}
+
+h4 {
+  display: inline;
+  font-size: 56px;
+  font-weight: 200;
+  line-height: 1.2;
+  color: inherit;
+  background-color: #ff0;
+  filter: drop-shadow(16px 0 0 #ff0) drop-shadow(-16px 0 0 #ff0);
+  flex-grow: 0;
+}
+
 .qrcode {
   max-width: 80%;
   display: block;

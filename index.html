@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Presentation description">
     <link rel="stylesheet" href="styles/SlideController.css">
-    <title>Presentation</title>
+    <title>HTML рекомендации и наилучшие практики</title>
   </head>
   <body>
     <main role="list">
 
-      <ex-title data-narrow role="listitem" >HTML Best Practice</ex-title>
+      <ex-title data-narrow data-level="2" role="listitem" >HTML рекомендации и наилучшие практики</ex-title>
       
       <ex-illustration data-src="images/3whales-t.png" data-alt="" role="listitem"></ex-illustration>
       
@@ -23,10 +23,9 @@
 
       <ex-illustration data-contain="" data-src="images/tools.jpeg" data-alt="" role="listitem"></ex-illustration>
 
-      <ex-title data-narrow data-level="2" role="listitem" >Prefer fewer elements over more elements</ex-title>
+      <ex-title data-narrow data-level="2" role="listitem" >Предпочитайте меньшее количество элементов большему</ex-title>
 
       <ex-screen data-src="images/mui-toggle-angular.png" data-alt="" role="listitem"></ex-screen>
-
 
       <ex-code data-code="16" role="listitem">
         <script class="language-html" type="text/plain">
@@ -168,17 +167,24 @@
       <ex-qrcode 
         data-qrcode="htmlhell.svg" 
         data-link="https://www.htmhell.dev/" 
-        data-label="Check HTML hell out!">
+        data-label="Отправляйтесь в HTML ад!">
         HTML Hell</ex-qrcode>
 
       <ex-qrcode 
         data-level="2"
         data-qrcode="csschallenge.svg" 
         data-link="https://css-challenges.com/" 
-        data-label="Take CSS Challenge!">
+        data-label="Примите вызов CSS!">
         CSS Challenges</ex-qrcode>
 
-      <ex-title data-narrow data-level="2" role="listitem" >Prefer semantic elements over non-semantic</ex-title>
+      <ex-qrcode 
+        data-level="4"
+        data-qrcode="perf.svg" 
+        data-link="https://www.youtube.com/watch?v=OEVUoP3ZH4c" 
+        data-label="Посмотрите доклад «The Intersection of Performance and Accessibility»!">
+        The Intersection of Performance and Accessibility</ex-qrcode>
+
+      <ex-title data-narrow data-level="2" role="listitem" >Cемантически корректные элементы предпочтительнее элементов общего назначения</ex-title>
 
       <ex-illustration data-src="images/elements.png" data-alt="" role="listitem"></ex-illustration>
 
@@ -280,11 +286,11 @@
         data-level="2"
         data-qrcode="almanac.svg" 
         data-link="https://almanac.httparchive.org/en/2021/markup" 
-        data-label="Open Web Almanac">
-        Read Web Almanac!</ex-qrcode>
+        data-label="Прочтите Web Almanac">
+        Вэб Альманах</ex-qrcode>
 
 
-      <ex-title data-narrow data-level="2" role="listitem" >Prefer progressive enhancement and simplification over hacky or complex solutions</ex-title>
+      <ex-title data-narrow data-level="2" role="listitem" >Прогрессивное улучшение и упрощение предпочтительнее, чем сложное или костыльное решение</ex-title>
 
       <ex-screen data-src="images/sticky.png" data-alt="" role="listitem"></ex-screen>
 
@@ -300,7 +306,7 @@
 
       <ex-screen data-src="images/sticky-support.png" data-alt="" role="listitem"></ex-screen>
 
-      <ex-title data-narrow data-level="2" role="listitem" >Prefer native over custom</ex-title>
+      <ex-title data-narrow data-level="2" role="listitem" >Предпочитайте нативное кастомному</ex-title>
 
       <ex-screen data-src="images/modal.png" data-alt="" role="listitem"></ex-screen>
       <ex-screen data-src="images/react-modal-inside.png" data-alt="" role="listitem"></ex-screen>
@@ -315,12 +321,12 @@
         <script class="language-html" type="text/plain">
           <dialog id="dialog">
             <form method="dialog">
-              <p>Merry Christmas!</p>
-              <button>Ok</button>
+              <p>С Новым Годом!</p>
+              <button>Ага</button>
             </form>
           </dialog>
           <button id="open-dialog">
-            Open modal!
+            Окно открой!
           </button>
         </script>
       </ex-code>
@@ -329,12 +335,12 @@
         <script class="language-html" data-line="1" type="text/plain">
           <dialog id="dialog" open>
             <form method="dialog">
-              <p>Merry Christmas!</p>
-              <button>Ok</button>
+              <p>С Новым Годом!</p>
+              <button>Ага</button>
             </form>
           </dialog>
           <button id="open-dialog">
-            Open modal!
+            Окно открой!
           </button>
         </script>
       </ex-code>
@@ -343,12 +349,12 @@
         <script class="language-html" data-line="2" type="text/plain">
           <dialog id="dialog" open>
             <form method="dialog">
-              <p>Merry Christmas!</p>
-              <button>Ok</button>
+              <p>С Новым Годом!</p>
+              <button>Ага</button>
             </form>
           </dialog>
           <button id="open-dialog">
-            Open modal!
+            Окно открой!
           </button>
         </script>
       </ex-code>
@@ -365,11 +371,11 @@
       <ex-slide data-click class="demo-1">
         <dialog id="dialog-1">
           <form method="dialog">
-            <p>Merry Christmas!</p>
-            <button>Ok</button>
+            <p>С Новым Годом!</p>
+            <button>Ага</button>
           </form>
         </dialog>
-        <button id="button-1">Open modal!</button>
+        <button id="button-1">Окно открой!</button>
         <script>
           const button1 = document.getElementById('button-1');
           const dialog1 = document.getElementById('dialog-1');
@@ -394,12 +400,12 @@
         <div class="demo-2">
           <dialog id="dialog-2">
             <form method="dialog">
-              <p>Merry Christmas!</p>
-              <button>Ok</button>
+              <p>С Новым Годом!</p>
+              <button>Ага</button>
             </form>
           </dialog>
           <button id="button-2">
-            Open modal!
+            Окно открой!
           </button>
           <script>
             const button2 = document.getElementById('button-2');
@@ -413,20 +419,20 @@
         data-level="1"
         data-qrcode="dialog.svg" 
         data-link="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element" 
-        data-label="Read about dialog element in the HTML spec">
+        data-label="Прочтите спецификацию элемента dialog">
         Dialog</ex-qrcode>
 
       <ex-qrcode 
         data-level="1"
         data-qrcode="openui.svg" 
         data-link="https://open-ui.org/" 
-        data-label="Read about Open UI">
+        data-label="Прочтите про Open UI">
         Open UI</ex-qrcode>
 
-      <ex-title data-narrow data-level="2" role="listitem" >Prefer valid over invalid</ex-title>
+      <ex-title data-narrow data-level="2" role="listitem" >Валидный код предпочтительнее невалидного</ex-title>
 
       <ex-illustration data-src="images/fish.jpeg" data-alt="" role="listitem">
-        <ex-cloud data-left="100px" data-top="-50px">Why?<br>Browsers<br>are smart!</ex-cloud>
+        <ex-cloud data-left="100px" data-top="-50px">Зачем?<br>Браузеры<br>умные!</ex-cloud>
       </ex-illustration>
 
       <ex-code data-code="42" role="listitem">
@@ -474,43 +480,43 @@
       </ex-slide>
 
       <ex-illustration data-src="images/fish.jpeg" data-alt="" role="listitem">
-        <ex-cloud data-left="100px" data-top="0px">It's<br>easy!</ex-cloud>
+        <ex-cloud data-size="24px" data-left="100px" data-top="0px">Легкотня!</ex-cloud>
       </ex-illustration>
 
       <ex-code data-code="24" role="listitem">
         <script class="language-html" type="text/plain">
           <table>
-            <h2>Population</h2>
-            <tr><td>Japan</td><td>125,360,000</td></tr>
-            <tr><td>Germany</td><td>83,190,556</td></tr>
-            <h2>Area</h2>
-            <tr><td>Japan</td><td>377,975 km<sup>2</sup></td></tr>
-            <tr><td>Germany</td><td>357,022 km<sup>2</sup></td></tr>
+            <h2>Популяция</h2>
+            <tr><td>Япония</td><td>125,360,000</td></tr>
+            <tr><td>Германия</td><td>83,190,556</td></tr>
+            <h2>Территория</h2>
+            <tr><td>Япония</td><td>377,975 km<sup>2</sup></td></tr>
+            <tr><td>Германия</td><td>357,022 km<sup>2</sup></td></tr>
           </table>
         </script>
       </ex-code>
 
       <ex-slide class="demo-4">
         <table>
-          <h2>Population</h2>
-          <tr><td>Japan  </td> <td>125,360,000</td></tr>
-          <tr><td>Germany</td> <td>83,190,556</td></tr>
-          <h2>Area</h2>
-          <tr><td>Japan  </td> <td>377,975 km<sup>2</sup></td></tr>
-          <tr><td>Germany</td> <td>357,022 km<sup>2</sup></td></tr>
+          <h2>Популяция</h2>
+          <tr><td>Япония  </td> <td>125,360,000</td></tr>
+          <tr><td>Германия</td> <td>83,190,556</td></tr>
+          <h2>Территория</h2>
+          <tr><td>Япония  </td> <td>377,975 km<sup>2</sup></td></tr>
+          <tr><td>Германия</td> <td>357,022 km<sup>2</sup></td></tr>
         </table>
       </ex-slide>
 
       <ex-code data-code="24" role="listitem">
         <script class="language-html" data-line="2" type="text/plain">
           <table>
-            <tr><th colspan="2">Population</th></tr>
+            <tr><th colspan="2">Популяция</th></tr>
             <tr>
-              <td>Japan</td>
+              <td>Япония</td>
               <td>125,360,000</td>
             </tr>
             <tr>
-              <td>Germany</td>
+              <td>Германия</td>
               <td>83,190,556</td>
             </tr>
             <!-- … -->
@@ -520,23 +526,23 @@
 
       <ex-slide class="demo-4 demo-4-2">
         <table>
-          <tr><th colspan="2">Population</th></tr>
+          <tr><th colspan="2">Популяция</th></tr>
           <tr>
-            <td>Japan  </td> <td>125,360,000</td>
+            <td>Япония  </td> <td>125,360,000</td>
           </tr><tr>
-            <td>Germany</td> <td>83,190,556</td>
+            <td>Германия</td> <td>83,190,556</td>
           </tr>
-          <tr><th colspan="2">Area</th></tr>
+          <tr><th colspan="2">Территория</th></tr>
           <tr>
-            <td>Japan  </td> <td>377,975 km<sup>2</sup></td>
+            <td>Япония  </td> <td>377,975 km<sup>2</sup></td>
           </tr><tr>
-            <td>Germany</td> <td>357,022 km<sup>2</sup></td>
+            <td>Германия</td> <td>357,022 km<sup>2</sup></td>
           </tr>
         </table>
       </ex-slide>
 
       <ex-illustration data-src="images/fish.jpeg" data-alt="" role="listitem">
-        <ex-cloud data-reverse data-left="230px" data-top="-60px">I knew<br>it!</ex-cloud>
+        <ex-cloud data-reverse data-left="230px" data-top="-60px">Так я и<br>знал!</ex-cloud>
       </ex-illustration>
 
       <ex-code data-code="22" role="listitem">
@@ -544,15 +550,15 @@
           <select name="order">
             <option>
               <input type="checkbox" value="engine-oil" />
-              Change oil
+              Сменить масло
             </option>
             <option>
               <input type="checkbox" value="brakes-fluid" />
-              Change brakes fluid
+              Сменить тормозную жидкость
             </option>
             <option>
               <input type="checkbox" value="fork-oil" />
-              Change fork oil
+              Сменить масло в вилке
             </option>
           </select>
         </script>
@@ -563,15 +569,15 @@
         <select name="order">
           <option>
             <input type="checkbox" value="engine-oil" />
-            Change oil
+            Сменить масло
           </option>
           <option>
             <input type="checkbox" value="brakes-fluid" />
-            Change brakes fluid
+            Сменить тормозную жидкость
           </option>
           <option>
             <input type="checkbox" value="fork-oil" />
-            Change fork oil
+            Сменить масло в вилке
           </option>
         </select>
       </div>
@@ -581,13 +587,13 @@
         <script class="language-html" data-line="1" type="text/plain">
           <select name="order" multiple>
             <option value="engine-oil">
-              Change oil
+              Сменить масло
             </option>
             <option value="brakes-fluid">
-              Change brakes fluid
+              Сменить тормозную жидкость
             </option>
             <option value="fork-oil">
-              Change fork oil
+              Сменить масло в вилке
             </option>
           </select>
         </script>
@@ -596,28 +602,28 @@
       <ex-slide data-click class="demo-6">
         <select name="order" multiple>
           <option value="engine-oil">
-            Change oil
+            Сменить масло
           </option>
           <option value="brakes-fluid">
-            Change brakes fluid
+            Сменить тормозную жидкость
           </option>
           <option value="fork-oil">
-            Change fork oil
+            Сменить масло в вилке
           </option>
         </select>
       </ex-slide>
 
       <ex-illustration data-src="images/fish-2.jpeg" data-alt="" role="listitem">
-        <ex-cloud data-reverse data-left="-300px" data-top="-97px">Please,<br>consider<br>reading<br>the spec!</ex-cloud>
+        <ex-cloud data-reverse data-size="22px" data-left="-300px" data-top="-97px">Пожалуйста,<br>прочтите<br>спецификацию!</ex-cloud>
       </ex-illustration>
 
       <ex-illustration data-src="images/fish-2.jpeg" data-alt="" role="listitem">
-        <ex-cloud data-reverse data-left="-300px" data-top="-80px">Please!</ex-cloud>
+        <ex-cloud data-reverse data-size="22px" data-left="-300px" data-top="-80px">Пожалуйста!</ex-cloud>
       </ex-illustration>
 
       <ex-screen data-src="images/options-spec.png" data-alt="" role="listitem"></ex-screen>
 
-      <ex-title data-narrow data-level="2" role="listitem" >Prefer presentation separated from the structure</ex-title>
+      <ex-title data-narrow data-level="2" role="listitem" >Предпочтительно разделять структуру и представление</ex-title>
 
       <ex-illustration data-src="images/3whales-t.png" data-alt="" role="listitem"></ex-illustration>
 
@@ -676,11 +682,18 @@
 
 
       <ex-qrcode 
-        data-level="2"
+        data-level="3"
+        data-qrcode="rec.svg" 
+        data-link="https://github.com/SilentImp/html/blob/master/README.ru.md" 
+        data-label="Прочесть рекомендации">
+        HTML рекомендации и наилучшие практики</ex-qrcode>
+
+      <ex-qrcode 
+        data-level="1"
         data-qrcode="html.svg" 
         data-link="https://silentimp.github.io/html/" 
-        data-label="Read about HTML Best Practice">
-        HTML Best Practice</ex-qrcode>
+        data-label="Посмотреть слайды">
+        Слайды</ex-qrcode>
 
 
     </main>

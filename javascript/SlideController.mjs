@@ -4,7 +4,6 @@ import isTouchDevice from "./isTouchDevice.mjs";
 import isElementVisible from "./isElementVisible.mjs";
 import Options from "./Options.mjs";
 import StateURL from "./StateURL.mjs";
-import calculateMaxFontSize from "./calculateMaxFontSize.mjs";
 
 class SlideController {
   static messenger = window[Symbol.for("SlideMessanger")];
@@ -68,11 +67,11 @@ class SlideController {
     this.slides = [...this.slides];
     this.totalSlides = this.slides.length;
 
-    SlideController.messenger.post("slidecontroller:total", {
-      detail: {
-        slideTotal: this.totalSlides,
-      },
-    });
+    // SlideController.messenger.post("slidecontroller:total", {
+    //   detail: {
+    //     slideTotal: this.totalSlides,
+    //   },
+    // });
 
     // Give slides a number and tabindex
     this.slides.forEach((slide, index) => {
@@ -83,6 +82,8 @@ class SlideController {
     // Get current slide from hash
     this.slideFromString();
 
+    console.log('slide', this.currentSlide);
+
     // select current slide
     SlideController.messenger.post("slidecontroller:select", {
       detail: {
@@ -90,9 +91,11 @@ class SlideController {
       },
       bubbles: true,
     });
+
+    // console.log(StateURL.fullscreen);
     
-     // Get fullscreen state from search query
-     if (StateURL.fullscreen) {
+    // Get fullscreen state from search query
+    if (StateURL.fullscreen) {
       SlideController.messenger.post("slidecontroller:fullscreenchange", {
         detail: {
           force: StateURL.fullscreen
@@ -132,38 +135,38 @@ class SlideController {
       /*most significant*/
       if ( xDiff > 0 ) {
         /* left swipe */
-        SlideController.messenger.post("slidecontroller:select", {
-          detail: {
-            slideNumber: this.cicleSlideNumber(this.currentSlide + 1),
-          },
-          bubbles: true,
-        });
+        // SlideController.messenger.post("slidecontroller:select", {
+        //   detail: {
+        //     slideNumber: this.cicleSlideNumber(this.currentSlide + 1),
+        //   },
+        //   bubbles: true,
+        // });
       } else {
         /* right swipe */
-        SlideController.messenger.post("slidecontroller:select", {
-          detail: {
-            slideNumber: this.cicleSlideNumber(this.currentSlide - 1),
-          },
-          bubbles: true,
-        });
+        // SlideController.messenger.post("slidecontroller:select", {
+        //   detail: {
+        //     slideNumber: this.cicleSlideNumber(this.currentSlide - 1),
+        //   },
+        //   bubbles: true,
+        // });
       }
     } else {
       if ( yDiff > 0 ) {
         /* up swipe */
-        SlideController.messenger.post("slidecontroller:select", {
-          detail: {
-            slideNumber: this.cicleSlideNumber(this.currentSlide + 1),
-          },
-          bubbles: true,
-        });
+        // SlideController.messenger.post("slidecontroller:select", {
+        //   detail: {
+        //     slideNumber: this.cicleSlideNumber(this.currentSlide + 1),
+        //   },
+        //   bubbles: true,
+        // });
       } else {
         /* down swipe */
-        SlideController.messenger.post("slidecontroller:select", {
-          detail: {
-            slideNumber: this.cicleSlideNumber(this.currentSlide - 1),
-          },
-          bubbles: true,
-        });
+        // SlideController.messenger.post("slidecontroller:select", {
+        //   detail: {
+        //     slideNumber: this.cicleSlideNumber(this.currentSlide - 1),
+        //   },
+        //   bubbles: true,
+        // });
       }
     }
 
@@ -182,17 +185,19 @@ class SlideController {
         },
         bubbles: true,
       });
-      SlideController.messenger.post("slidecontroller:fullscreenchange", {
-        detail: {
-          force: !StateURL.fullscreen,
-        },
-      });
+      // SlideController.messenger.post("slidecontroller:fullscreenchange", {
+      //   detail: {
+      //     force: !StateURL.fullscreen,
+      //   },
+      // });
     }
   }
 
   // toggle fullscreen mode
   fullScreenChange (event) {
     const force = event?.detail?.force;
+    console.log('fullscreen force:', force);
+
     window.document.documentElement.classList.toggle(ClassNames.fullscreen, force);
     StateURL.fullscreen = force;
 
@@ -201,6 +206,11 @@ class SlideController {
         slide.classList.toggle(ClassNames.fullscreen, force);
       });
     }
+    
+    // no need to scroll in fullscreen
+    if (force === true) return;
+
+    console.log('change');
 
     // scroll to slide in the list mode
     SlideController.messenger.post("slidecontroller:change", {
@@ -267,16 +277,17 @@ class SlideController {
   markSlide (event) {
     const slideNumber = this.safeSlideNumber(event?.detail?.slideNumber);
     
-    // no need to anything if it's the same slide
+
     if (
       slideNumber === this.currentSlide && 
       this.slides[this.currentSlide].classList.contains(ClassNames.currentSlide)
     ) {
-      SlideController.messenger.post("slidecontroller:fullscreenchange", {
-        detail: {
-          force: !StateURL.fullscreen
-        }
-      });
+      return;
+      // SlideController.messenger.post("slidecontroller:fullscreenchange", {
+      //   detail: {
+      //     force: !StateURL.fullscreen
+      //   }
+      // });
     }
 
     // remove old classes

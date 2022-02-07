@@ -63,7 +63,7 @@ class ExgibitonistCountdown extends HTMLElement {
     this.selectSlide = this.selectSlide.bind(this);
     this.setTotal = this.setTotal.bind(this);
 
-    window[Symbol.for("SlideMessanger")].register('slidecontroller:fullscreenchange', this.fullScreenChange);
+    // window[Symbol.for("SlideMessanger")].register('slidecontroller:fullscreenchange', this.fullScreenChange);
   }
 
   setTotal(event) {
@@ -104,8 +104,8 @@ class ExgibitonistCountdown extends HTMLElement {
       this.lateForCritical = this.getAttribute(attributes.lateForCritical) ?? defaults.lateForCritical;
     }
 
-    window[Symbol.for("SlideMessanger")].register('slidecontroller:total', this.setTotal);
-    window[Symbol.for("SlideMessanger")].register('slidecontroller:select', this.selectSlide);
+    // window[Symbol.for("SlideMessanger")].register('slidecontroller:total', this.setTotal);
+    // window[Symbol.for("SlideMessanger")].register('slidecontroller:select', this.selectSlide);
 
     if (StateURL.fullscreen || this.showInList) requestAnimationFrame(this.calculate);
   }

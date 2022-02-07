@@ -12,6 +12,7 @@ class Cloud extends HTMLElement {
 
     if (this.dataset.left) this.style.setProperty('--left', this.dataset.left);
     if (this.dataset.top) this.style.setProperty('--top', this.dataset.top);
+    if (this.dataset.size) this.style.setProperty('--font-size', this.dataset.size);
   }
 }
       
